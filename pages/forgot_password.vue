@@ -1,13 +1,12 @@
 <template>
-  <div class="container">
+  <div class="app-page container">
     <div>
 
       <h1 class="mega">
         Reset password
       </h1>
 
-      <hr>
-      <div class="text-left">
+      <div class="card text-left my-3">
 
         <b-form id="reset-password-form" @submit="onSubmit" @reset="onReset">
 
@@ -29,7 +28,6 @@
         </b-form>
       </div>
 
-      <hr>
       <div class="text-left">
         <small><router-link :to="'/login'">Back to login</router-link></small>
       </div>
@@ -59,10 +57,9 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 .container {
   margin: 0 auto;
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;

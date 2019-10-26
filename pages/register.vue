@@ -1,13 +1,12 @@
 <template>
-  <div class="container">
+  <div class="app-page container">
     <div>
       <!-- <logo /> -->
       <h1 class="mega text-left">
         Create an account
       </h1>
 
-      <hr>
-      <div class="text-left">
+      <div class="card text-left my-3">
         <b-form id="registration-form" @submit="onSubmit" @reset="onReset">
 
           <div class="row">
@@ -69,12 +68,10 @@
             ></b-form-input>
           </b-form-group>
 
-          <b-button variant="primary">Create account</b-button>
+          <b-button variant="primary"><fa icon="arrow-right"/> Create account</b-button>
         </b-form>
 
       </div>
-
-      <hr>
 
       <div class="text-left">
         <small>Already registered? <router-link :to="'/login'">Login</router-link></small>
@@ -108,10 +105,9 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 .container {
   margin: 0 auto;
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -1,14 +1,16 @@
 <template>
-  <div class="container">
+  <div class="app-page container">
     <div>
-      <!-- <logo /> -->
+      
       <h1 class="mega text-left">
         Login
       </h1>
 
-      <hr>
-
       <div class="text-left">
+        <small>Not yet registered? <router-link :to="'/register'">Create an account</router-link></small>
+      </div>
+
+      <div class="card text-left my-3">
         <b-form id="login-form" @submit="onSubmit" @reset="onReset">
 
           <b-form-group
@@ -41,16 +43,12 @@
             <router-link :to="'/forgot_password'"><small>Forget your password?</small></router-link>
           </b-form-group>
 
-          <b-button variant="primary">Login</b-button>
+          <b-button variant="primary"><fa icon="arrow-right"/> Login</b-button>
         </b-form>
 
       </div>
 
-      <hr>
-
-      <div class="text-left">
-        <small>Not yet registered? <router-link :to="'/register'">Create an account</router-link></small>
-      </div>
+      
     </div>
   </div>
 </template>
@@ -79,10 +77,9 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 .container {
   margin: 0 auto;
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
