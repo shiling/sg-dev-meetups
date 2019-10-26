@@ -8,7 +8,7 @@
 		text-align: center;
 		padding: 1rem;
 		font-size: .8rem;
-		position: absolute;
+		position: fixed;
 		bottom: 0;
 		width: 100%;
 	}

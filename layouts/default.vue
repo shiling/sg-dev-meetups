@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="app">
     <!-- navigation -->
     <app-navigation/>
     <!-- page -->
@@ -34,6 +34,11 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+}
+
+#app {
+  position: relative;
+  padding-bottom: 100px; /* leave some room for the footer */
 }
 
 /* Additional styles */
