@@ -23,6 +23,17 @@
         >
           GitHub
         </a>
+
+        Main Paths 
+        <ul>
+          <li><a href="/user">User</a></li>
+
+          <li><a href="/group">Group</a></li>
+
+          <li><a href="/event">Event</a></li>
+        </ul>
+
+
       </div>
     </div>
   </div>
