@@ -3,7 +3,7 @@
     <div>
       <logo />
       <h1 class="title">
-        HOME PAGE
+        EVENT "{{$route.params.slug}}" INFO PAGE
       </h1>
       <h2 class="subtitle">
         Platform for SG software developers to meetup

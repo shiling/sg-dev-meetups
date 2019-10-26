@@ -3,7 +3,7 @@
     <div>
       <logo />
       <h1 class="title">
-        HOME PAGE
+        sg-dev-meetups
       </h1>
       <h2 class="subtitle">
         Platform for SG software developers to meetup
