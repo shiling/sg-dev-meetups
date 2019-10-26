@@ -2,7 +2,7 @@
   <div class="container">
     <div>
       <logo />
-      <h1 class="title">
+      <h1 class="mega">
         Reset password
       </h1>
 
@@ -60,13 +60,5 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
-}
-
-.title {
-  display: block;
-  font-weight: bold;
-  font-size: 3rem;
-  color: #35495e;
-  letter-spacing: 1px;
 }
 </style>

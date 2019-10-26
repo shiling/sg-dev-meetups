@@ -2,7 +2,7 @@
   <div class="container">
     <div>
       <logo />
-      <h1 class="title">
+      <h1 class="mega">
         Login
       </h1>
 
@@ -31,11 +31,12 @@
           >
             <b-form-input
               id="login-form__password-input"
+              class="mb-1"
               v-model="form.password"
               type="password"
               required
             ></b-form-input>
-            <router-link :to="'/forgot_password'">Forget your password?</router-link>
+            <router-link :to="'/forgot_password'"><small>Forget your password?</small></router-link>
           </b-form-group>
 
           <b-button variant="primary">Login</b-button>
@@ -82,13 +83,5 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
-}
-
-.title {
-  display: block;
-  font-weight: bold;
-  font-size: 3rem;
-  color: #35495e;
-  letter-spacing: 1px;
 }
 </style>
