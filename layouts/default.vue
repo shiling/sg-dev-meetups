@@ -1,10 +1,29 @@
 <template>
   <div>
+    <!-- navigation -->
+    <app-navigation/>
+    <!-- page -->
     <nuxt />
+    <app-footer/>
   </div>
 </template>
+<script>
 
+import AppNavigation from "~/components/AppNavigation"
+import AppFooter from "~/components/AppFooter"
+
+export default {
+  components: {
+    AppNavigation,
+    AppFooter
+  }
+}
+
+</script>
 <style>
+
+/* Default styles from Nuxt */
+
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -52,4 +71,8 @@ html {
   color: #fff;
   background-color: #35495e;
 }
+
+/* Additional styles */
+
+
 </style>
