@@ -19,6 +19,15 @@
       </div>
     </div>
 
+    <div id="font-awesome" class="mb-3">
+      <h1>FontAwesome</h1>
+      <hr>
+      <div>
+        <fa icon="cog"/>
+        <pre><code>&lt;fa icon="cog"/&gt;</code></pre>
+      </div>
+    </div>
+
     <div id="buttons">
       <h1>Buttons</h1>
       <hr>
