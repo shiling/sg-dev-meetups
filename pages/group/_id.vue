@@ -3,7 +3,9 @@
     <div class="row">
         
       <div class="col-md-6">
-          <img src='https://images.unsplash.com/photo-1469135762633-c299d101636a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=968&q=80' style='width:100%;max-height:350px'> 
+          <img src='https://images.unsplash.com/photo-1469135762633-c299d101636a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=968&q=80' 
+          class='rounded img-fluid'
+          style='width:100%;max-height:350px'> 
       </div>
       <div class="col-md-6">
          <h1>
@@ -13,8 +15,8 @@
             Platform for SG software developers to meetup
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
           </h5> 
-          <div class="">
-            <i class="fa fa-address-book" aria-hidden="true"></i>
+          <div class="mt-4">
+            <i class="fa fa-clock"></i>dd
           </div>     
           <div class="">
             <i class="fa fa-address-book" aria-hidden="true"></i>
@@ -25,6 +27,10 @@
       </div>
     </div>
 
+    <div class="py-3">
+      <hr>  
+    </div>
+    
     <div class="row mt-4">
       
         <div class="col-md-6">
@@ -37,6 +43,16 @@
                  <h4>Vue.js Meeting</h4>
                  <div class="">
                        <i class='fa'> HackerSpace</i>
+                 </div>
+                 <div class="row">
+                     <div class="col-md-6">
+                       48 Attendees
+                     </div>
+                     <div class="col-md-6">
+                       <button class='btn btn-primary'>
+                         Join
+                       </button>
+                     </div>
                  </div>
                  <div class="text-muted">
                       Lorem Ipsum 300
