@@ -45,9 +45,9 @@
 
           <b-button variant="primary"><fa icon="arrow-right"/> Login</b-button>
         </b-form>
-
+        <hr>
+        <b-button variant="dark"><fa :icon="['fab', 'github']"/> Login with Github</b-button>
       </div>
-
       
     </div>
   </div>
