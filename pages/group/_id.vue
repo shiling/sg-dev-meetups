@@ -2,18 +2,66 @@
   <div class="container">
     <div class="row">
         
-      <div class="col-md-8">
-          <img src='https://images.unsplash.com/photo-1469135762633-c299d101636a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=968&q=80' style='width:100%'> 
+      <div class="col-md-6">
+          <img src='https://images.unsplash.com/photo-1469135762633-c299d101636a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=968&q=80' style='width:100%;max-height:350px'> 
       </div>
-      <div class="col-md-4">
-         <h2>
+      <div class="col-md-6">
+         <h1>
           GROUP "{{$route.params.id}}" PAGE
-          </h2>
-          <h5>
+          </h1>
+          <h5 class='mt-4'>
             Platform for SG software developers to meetup
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-          </h5>      
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+          </h5> 
+          <div class="">
+            <i class="fa fa-address-book" aria-hidden="true"></i>
+          </div>     
+          <div class="">
+            <i class="fa fa-address-book" aria-hidden="true"></i>
+          </div>     
+          <div class="">
+            <i class="fa fa-address-book" aria-hidden="true"></i>
+          </div>     
       </div>
+    </div>
+
+    <div class="row mt-4">
+      
+        <div class="col-md-6">
+              
+            <h2>Events</h2>
+
+            <div class="card">
+              <div class="card-body">
+                
+              </div>
+            </div>
+
+        </div>
+
+        <div class="col-md-6">
+            
+            <div class="">
+              <h2>Organizers</h2>
+              <div class="">
+                <img src="https://image.flaticon.com/icons/svg/145/145842.svg" class='profile'>
+                <b>Aaron</b>
+              </div>
+            </div>
+            <div class="mt-5">
+              <h2>Members</h2>
+              <div class="row">
+                <div v-for="n in 16" class="col-sm">
+                  <img src="https://image.flaticon.com/icons/svg/147/147144.svg" class='profile'>
+                  {{ n }}
+                </div>
+
+              </div>
+              
+            </div>
+
+        </div>
+
     </div>
   </div>
   
@@ -30,10 +78,16 @@ export default {
     return {
       'img':'someimg'
     }
+  },
+
+  methods: {
+
   }
 }
 </script>
 
 <style>
-
+  .profile {
+    height: 60px;
+  }
 </style>
