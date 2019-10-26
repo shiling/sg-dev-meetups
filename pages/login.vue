@@ -1,12 +1,14 @@
 <template>
   <div class="container">
     <div>
-      <logo />
-      <h1 class="mega">
+      <!-- <logo /> -->
+      <h1 class="mega text-left">
         Login
       </h1>
 
-      <div class="border rounded p-3 mb-3 text-left">
+      <hr>
+
+      <div class="text-left">
         <b-form id="login-form" @submit="onSubmit" @reset="onReset">
 
           <b-form-group
@@ -44,8 +46,10 @@
 
       </div>
 
+      <hr>
+
       <div class="text-left">
-        <router-link :to="'/register'">Create an account</router-link>
+        <small>Not yet registered? <router-link :to="'/register'">Create an account</router-link></small>
       </div>
     </div>
   </div>
