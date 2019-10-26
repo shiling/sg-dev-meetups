@@ -35,6 +35,7 @@
               type="password"
               required
             ></b-form-input>
+            <router-link :to="'/forgot_password'">Forget your password?</router-link>
           </b-form-group>
 
           <b-button variant="primary">Login</b-button>
