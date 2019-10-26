@@ -1,0 +1,6 @@
+Users		
+- id	
+- name	
+- email	
+- signin	
+- role > basic, admin
