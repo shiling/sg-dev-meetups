@@ -33,7 +33,14 @@
 
             <div class="card">
               <div class="card-body">
-                
+                 <h6>12 Nov 19</h6>
+                 <h4>Vue.js Meeting</h4>
+                 <div class="">
+                       <i class='fa'> HackerSpace</i>
+                 </div>
+                 <div class="text-muted">
+                      Lorem Ipsum 300
+                 </div>
               </div>
             </div>
 
