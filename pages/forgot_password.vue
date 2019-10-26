@@ -1,12 +1,13 @@
 <template>
   <div class="container">
     <div>
-      <logo />
+
       <h1 class="mega">
         Reset password
       </h1>
 
-      <div class="border rounded p-3 mb-3 text-left">
+      <hr>
+      <div class="text-left">
 
         <b-form id="reset-password-form" @submit="onSubmit" @reset="onReset">
 
@@ -20,11 +21,17 @@
               id="reset-password-form__email-input"
               v-model="form.email"
               type="email"
+              placeholder="Enter email"
               required
             ></b-form-input>
           </b-form-group>
           <b-button variant="primary">Reset password</b-button>
         </b-form>
+      </div>
+
+      <hr>
+      <div class="text-left">
+        <small><router-link :to="'/login'">Back to login</router-link></small>
       </div>
     </div>
   </div>
