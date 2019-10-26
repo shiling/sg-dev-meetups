@@ -13,21 +13,15 @@
 
 			<!-- Right aligned nav items -->
 			<b-navbar-nav class="ml-auto">
-			
-				<b-nav-item-dropdown text="Lang" right>
-					<b-dropdown-item href="#">EN</b-dropdown-item>
-					<b-dropdown-item href="#">ES</b-dropdown-item>
-					<b-dropdown-item href="#">RU</b-dropdown-item>
-					<b-dropdown-item href="#">FA</b-dropdown-item>
-				</b-nav-item-dropdown>
-
-				<b-nav-item-dropdown right>
+		
+				<b-nav-item-dropdown id="account-menu" right>
 					<!-- Using 'button-content' slot -->
 					<template v-slot:button-content>
-						<em>User</em>
+						<fa icon="user-circle"/>
 					</template>
-					<b-dropdown-item href="#">Profile</b-dropdown-item>
-					<b-dropdown-item href="#">Sign Out</b-dropdown-item>
+					<b-dropdown-item href="/user/chenhuijing">Profile</b-dropdown-item>
+					<b-dropdown-item href="/login">Login</b-dropdown-item>
+					<b-dropdown-item href="#logout">Logout</b-dropdown-item>
 				</b-nav-item-dropdown>
 			</b-navbar-nav>
 			</b-collapse>
@@ -35,11 +29,23 @@
 		</div>
 </template>
 <style lang="scss">
+	
 	#app-nav {
 		nav.navbar {
 			background-color: #f44336;
 		}		
 	}
+
+	#account-menu {
+		.nav-link {
+			padding: 0;
+			font-size: 2rem;
+			&:after{
+				display: none;
+			}
+		}
+	}
+
 </style>
 <script>
 export default{
