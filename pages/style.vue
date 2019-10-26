@@ -35,6 +35,49 @@
       </div>
     </div>
 
+    <div id="form">
+      <h1>Form</h1>
+      <hr>
+      
+      <div class="border rounded p-3 mb-3 text-left bg-blue">
+        <b-form id="login-form">
+
+          <b-form-group
+            id="login-form__email-group"
+            label="Email"
+            label-for="login-form__email-input"
+            description="We'll never share your email with anyone else."
+          >
+            <b-form-input
+              id="login-form__email-input"
+              type="email"
+              required
+              placeholder="Enter email"
+            ></b-form-input>
+          </b-form-group>
+
+          <b-form-group
+            id="login-form__password-group"
+            label="Password"
+            label-for="login-form__password-input"
+          >
+            <b-form-input
+              id="login-form__password-input"
+              class="mb-1"
+              type="password"
+              required
+            ></b-form-input>
+            <router-link :to="'/forgot_password'"><small>Forget your password?</small></router-link>
+          </b-form-group>
+
+          <b-button variant="primary">Login</b-button>
+        </b-form>
+
+      </div>
+
+
+    </div>
+
   </div>
 </template>
 
