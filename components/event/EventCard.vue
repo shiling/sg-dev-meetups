@@ -1,5 +1,5 @@
 <template>
-	<router-link to="#" class="card event-card">
+	<router-link :to="eventDetailsLink" class="card event-card">
 		<div class="event-card__header mb-2">
 			<div class="event-card__name">
 				{{event.name}}
@@ -34,6 +34,11 @@ export default {
 		showRsvp: {
 			type: Boolean,
 			default: true
+		}
+	},
+	computed: {
+		eventDetailsLink(){
+			return `/event/${this.event.id}`
 		}
 	}
 }
