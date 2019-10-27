@@ -1,15 +1,29 @@
 .btn {
-	font-weight: bold;
+  font-weight: bold;
 }
 
-.btn-outline-primary {
-	border: 1px solid #f44336;
-	color: #f44336;
-	background-color:#fff;
-}
+// .btn-primary {
+//   &:not(:disabled) {
+//     background-color: #651fff;
+//     border-color: #651fff;
+//     color: white;
 
-.btn-outline-primary:hover {
-	background-color: #f44336;
-	color: white;
-	border: 1px solid #f44336;
-}
+//     &:hover,
+//     &:active {
+//       background-color: #6200ea;
+//       border-color: #6200ea;
+//     }
+//   }
+// }
+
+// .btn-outline-primary {
+//   border: 1px solid #f44336;
+//   color: #f44336;
+//   background-color: #fff;
+// }
+
+// .btn-outline-primary:hover {
+//   background-color: #f44336;
+//   color: white;
+//   border: 1px solid #f44336;
+// }

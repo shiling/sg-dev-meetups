@@ -42,9 +42,11 @@ module.exports = {
   modules: [
     // Doc: https://bootstrap-vue.js.org
     'bootstrap-vue/nuxt',
-    "bootstrap-vue/nuxt",
     "nuxt-fontawesome"
   ],
+  bootstrapVue: {
+    bootstrapCSS: false, // Or `css: false`
+  },
   fontawesome: {
     component: "fa",
     imports: [

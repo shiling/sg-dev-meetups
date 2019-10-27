@@ -1,4 +1,22 @@
+//----------------------
+// Override boostraps
+//----------------------
+$theme-colors: (
+  "brand": salmon,
+  "primary": #651fff,
+  "danger": #d32f2f
+);
 
+$link-color: #448aff;
+
+// Bootstrap and its default variables
+@import '../../node_modules/bootstrap/scss/bootstrap';
+// BootstrapVue and its default variables
+@import '../../node_modules/bootstrap-vue/src/index.scss';
+
+//----------------------
+// App
+//----------------------
 @import "./button";
 @import "./card";
 @import "./form";
@@ -6,4 +24,3 @@
 @import "./global";
 @import "./navbar";
 @import "./typography";
-
