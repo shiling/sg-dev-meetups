@@ -11,10 +11,10 @@
          <h1>
           GROUP "{{$route.params.id}}" PAGE
           </h1>
-          <h5 class='mt-4'>
+          <h6 class='mt-4 text-muted'>
             Platform for SG software developers to meetup
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-          </h5>
+          </h6>
 
           <div class="details mt-4 ml-4">
             <div>

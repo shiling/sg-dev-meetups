@@ -1,12 +1,22 @@
 <template>
 	<div class="container mt-4">
-		<h1>Popular in Singapore ({{groups.length}})</h1>
-		<ul class="list-group list-group-horizontal">
-			<li class="list-group-item">First item</li>
-			<li class="list-group-item">Second item</li>
-			<li class="list-group-item">Third item</li>
-			<li class="list-group-item">Fourth item</li>
-		</ul> 		
+		
+		<div class="row">
+			<div class="col-md-8">
+				<h1>Popular in Singapore ({{groups.length}})</h1>
+				<ul class="list-group list-group-horizontal">
+					<li class="list-group-item">First item</li>
+					<li class="list-group-item">Second item</li>
+					<li class="list-group-item">Third item</li>
+					<li class="list-group-item">Fourth item</li>
+				</ul> 
+			</div>
+			<div class="col-md-4 pt-4 text-right">
+				<router-link :to="'group/create'" class='btn btn-outline-primary'>
+					<fa :icon="['fa','users']"/> Create Your Own Group
+				</router-link>
+			</div>
+		</div>
 	
 		<div class="row mt-4">
 		
