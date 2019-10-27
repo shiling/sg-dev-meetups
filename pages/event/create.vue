@@ -100,7 +100,7 @@
                 <div style="padding-top:10px;padding-bottom:10px;">
                 <div class="row flex-nowrap" style="overflow-x:scroll;overflow-y:hidden">
                   <b-col md="3" v-for="item in [{location: 'asd', address: '123'},{location: 'asd', address: '123'},{location: 'asd', address: '123'},{location: 'asd', address: '123'},{location: 'asd', address: '123'},{location: 'asd', address: '123'},{location: 'asd', address: '123'},{location: 'asd', address: '123'},{location: 'asd', address: '123'},{location: 'asd', address: '123'},{location: 'asd', address: '123'},{location: 'asd', address: '123'},{location: 'asd', address: '123'}]">
-                    <div class="card">
+                    <div class="card" style="margin-bottom: 10px">
                       <div>
                         <p>{{ item.location }}</p>
                       </div>
@@ -114,7 +114,50 @@
               </div>
               
 
+              <b-form-group
+                id="login-form__email-group"
+                label="Featured Photo"
+                label-for="login-form__email-input">
+                <b-form-file accept="image/*"></b-form-file>
+              </b-form-group>
+
+              <b-form-group
+                id="login-form__email-group"
+                label="Hosts"
+                label-for="login-form__email-input">
+
                 
+
+                
+
+                <div  style="padding-bottom:10px;" v-for="item in hosts">
+                  <div class="card">
+                    <div class="row">
+                      <b-col md="2">
+                          <div data-v-dd9bed06="" class="user-avatar cropped rounded-circle" style="background-image: url(&quot;https://picsum.photos/id/237/200&quot;);"></div>
+                      </b-col>
+                      <b-col md="10">
+                          <div>
+                            <h3>
+                              Lionel Leo
+                            </h3>
+                            <p>
+                              Co-Organiser
+                            </p>
+                          </div>
+                      </b-col>
+
+                    </div>
+                  </div>
+                </div>
+
+                <b-form-input
+                  id="login-form__email-input"
+                  type="text"
+                  required>
+                </b-form-input>
+
+              </b-form-group>
 
               
     
@@ -129,6 +172,7 @@
 
 <script>
 import Logo from '~/components/Logo.vue'
+import UserAvatar from "~/components/user/UserAvatar.vue"
 
 export default {
   components: {
@@ -141,6 +185,30 @@ export default {
     }
   },
   data: {
+    hosts: [
+      {location: 'asd', address: '123'},
+      {location: 'asd', address: '123'},
+      {location: 'asd', address: '123'},
+      {location: 'asd', address: '123'},
+      {location: 'asd', address: '123'},
+      {location: 'asd', address: '123'},
+      {location: 'asd', address: '123'},
+      {location: 'asd', address: '123'},
+      {location: 'asd', address: '123'},
+      {location: 'asd', address: '123'}
+    ],
+    hosts: [
+      {location: 'asd', address: '123'},
+      {location: 'asd', address: '123'},
+      {location: 'asd', address: '123'},
+      {location: 'asd', address: '123'},
+      {location: 'asd', address: '123'},
+      {location: 'asd', address: '123'},
+      {location: 'asd', address: '123'},
+      {location: 'asd', address: '123'},
+      {location: 'asd', address: '123'},
+      {location: 'asd', address: '123'}
+    ],
     items: [
       { title: 'Foo' },
       { title: 'Bar' }
