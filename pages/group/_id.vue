@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container mt-4">
     <div class="row" style='background-color: #fff'>
         
       <div class="col-md-6" >
@@ -86,18 +86,19 @@
         <div class="col-md-6">
             
             <div class="">
-              <h3>Organizers</h3>
+              <h3>Organizers (5)</h3>
               <div class="">
                 <img src="https://image.flaticon.com/icons/svg/145/145842.svg" class='profile'>
                 <b>Aaron</b>
               </div>
             </div>
             <div class="mt-5">
-              <h3>Members</h3>
-              <div class="row">
+              <h3><fa :icon="['fa','users']" /> Members (200)</h3>
+              <br>
+              <div class="row mt-2">
                 <div v-for="n in 16" class="col-sm">
-                  <img src="https://image.flaticon.com/icons/svg/147/147144.svg" class='profile'>
-                  {{ n }}
+                  <img src="https://image.flaticon.com/icons/svg/147/147144.svg" class='profile mb-4'>
+                  
                 </div>
 
               </div>

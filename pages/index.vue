@@ -25,14 +25,19 @@
         </a>
 
         Main Paths 
-        <ul>
-          <li><a href="/user">User</a></li>
+        <div class="row text-left">
+          <ul class='path'>
+            <li><a href="/user">User</a></li>
+            <li><a href="/login">Login</a></li>
 
-          <li><a href="/group">Group</a></li>
-          <li><a href="/group/1">Group id</a></li>
+            <li><a href="/group">Group</a></li>
+            <li><a href="/group/1">Group id</a></li>
 
-          <li><a href="/event">Event</a></li>
-        </ul>
+            <li><a href="/event">Event</a></li>
+          </ul>
+        </div>
+
+        
 
 
       </div>

@@ -1,5 +1,5 @@
 <template>
-	<div id="app-nav" class='mb-4'>
+	<div id="app-nav">
 		<b-navbar toggleable="lg" type="dark">
 			<b-navbar-brand href="/">SgDevsMeetup</b-navbar-brand>
 
