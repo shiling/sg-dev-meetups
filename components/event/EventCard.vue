@@ -55,7 +55,7 @@ export default {
 
 		.event-card__date{
 			
-			background: #651fff;
+			background: salmon;
 			color: white;
 			padding: .25rem 1rem;
 			border-radius: 0px;
