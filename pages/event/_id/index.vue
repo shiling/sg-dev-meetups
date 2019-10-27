@@ -77,34 +77,33 @@
       </div>
     </div>
     <div class="col-md-6">
-        <h3>Event Details</h3>
-      <div class="row mt-4">
-        <div class="col-md-2">
-          <fa :icon="['far','clock']" class='fa-2x'/>
-        </div>
-        <div class="col-md-10">
-          <h5>
-            14:00, 24 Nov 2019
-          </h5>
-          
-        </div>
-      </div>
-
-      <div class="row mt-4">
-        <div class="col-md-2">
-            <fa :icon="['fa','map-marker-alt']" class='fa-2x'/>
-        </div>
-        <div class="col-md-10">
-            <h5>
+      <h3>Event Details</h3>
+      <div class="card mt-4">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-2">
+              <fa :icon="['far','clock']" class='fa-2x'/>
+            </div>
+            <div class="col-md-10">
+              <h5>
+                14:00, 24 Nov 2019
+              </h5>
+            </div>
+          </div>          
+          <div class="row mt-4">
+            <div class="col-md-2">
+              <fa :icon="['fa','map-marker-alt']" class='fa-2x'/>
+            </div>
+            <div class="col-md-10">
+              <h5>
                 20 Guilmade Road
                 <br>
                 Singapore 445555
-              
-            </h5>
-            
+              </h5>
+            </div>
+          </div>
         </div>
       </div>
-
 
 
     </div>
