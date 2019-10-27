@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <div class="row">
+    <div class="row" style='background-color: #fff'>
         
-      <div class="col-md-6">
+      <div class="col-md-6" >
           <img src='https://images.unsplash.com/photo-1469135762633-c299d101636a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=968&q=80' 
           class='rounded img-fluid'
           style='width:100%;max-height:350px'> 
@@ -57,14 +57,14 @@
       
         <div class="col-md-6">
               
-            <h2>Events (10)</h2>
+            <h3>Events (10)</h3>
 
-            <div class="card mt-2">
+            <div v-for='n in 2' class="card mb-4">
               <div class="card-body">
                  <h6>12 Nov 19, 14:00</h6>
                  <h4>Vue.js Meeting</h4>
                  <div class="text-muted">
-                      Lorem Ipsum 300
+                      Lorem Ipsum 300 {{ n }}
                  </div>
                  <div class="row">
                      <div class="col-md-6">
@@ -86,14 +86,14 @@
         <div class="col-md-6">
             
             <div class="">
-              <h2>Organizers</h2>
+              <h3>Organizers</h3>
               <div class="">
                 <img src="https://image.flaticon.com/icons/svg/145/145842.svg" class='profile'>
                 <b>Aaron</b>
               </div>
             </div>
             <div class="mt-5">
-              <h2>Members</h2>
+              <h3>Members</h3>
               <div class="row">
                 <div v-for="n in 16" class="col-sm">
                   <img src="https://image.flaticon.com/icons/svg/147/147144.svg" class='profile'>
@@ -132,7 +132,7 @@ export default {
 
 <style>
   .profile {
-    height: 60px;
+    height: 50px;
   }
   .details div {
     margin-bottom: 5px
