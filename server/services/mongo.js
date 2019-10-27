@@ -1,34 +1,31 @@
 const { MONGO_URL } = require('../config')
-let mongo
+const { MongoClient } = require('mongodb')
 
-if (!mongo && MONGO_URL) {
+const mongo = { db: null }
+if (!mongo.db && MONGO_URL) {
   try {
-    const url = MONGO_URL
-    const MongoClient = require('mongodb').MongoClient
-
-    // (async function() {
-    mongo = new MongoClient(url, {
+    const client = new MongoClient(MONGO_URL, {
+      useUnifiedTopology: true,
+      useNewUrlParser: true // reconnectTries: Infinity, poolSize: 10, reconnectInterval
       // auth: { user: 'test', password: 'test123' },
-      // authMechanism: authMechanism,
-      useNewUrlParser: true,
-      useUnifiedTopology: true
+        // authMechanism: authMechanism,
       // uri_decode_auth: true
       // reconnectTries: Infinity,
       // poolSize: 10
       // reconnectInterval
     })
-    // try { await mongo.connect() } catch (e) { }
-    mongo.connect((err, db) => {
-      if (err) console.log('mongo error', err)
-      else if (db) {
+    client.connect(err => {
+      if (!err) {
+        console.log('MONGO CONNECTED')
+        mongo.db = client.db()
         // mongoStream = db.db('mm').collection('users').watch()
         // mongoStream.on('change', (change) => {
         //   console.log(change); // You could parse out the needed info and send only that data.
         //   // use websocket to listen to changes
         // })
       }
+      else console.log('MONGO', err)
     })
-    // })()
   } catch (e) { console.log('mongo', e) }
 }
 

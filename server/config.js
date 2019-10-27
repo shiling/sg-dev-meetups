@@ -22,11 +22,11 @@ OTP_SERVICE_NAME=Test Service
 module.exports = {
   NODE_ENV: process.env.NODE_ENV,
 
-  KEY_EXPIRY: process.env.KEY_EXPIRY || '15m',
-
   // JWT
   JWT_ALG: process.env.JWT_ALG || '',
   JWT_CERTS_PATH: './certs/jwt' || '',
+  SECRET_KEY: process.env.SECRET_KEY || '12345678',
+  KEY_EXPIRY: process.env.KEY_EXPIRY || '15m',
 
   // PORTS
   API_PORT: process.env.API_PORT || 3000,

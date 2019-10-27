@@ -1,24 +1,22 @@
 const axios = require('axios')
 const express = require('express')
 const authRoutes = express.Router()
-const otplib = require('otplib')
 
-const { USE_OTP, NODE_ENV } = require('../config')
+const { createToken, isAuthenticated, isGithubAuthenticated, authUser, signupUser } = require('../services/auth')
 
-const { authUser } = require('../middleware/auth')
-const { createToken, isAuthenticated, isGithubAuthenticated } = require('../services')
+// const User = require('../models/User')
 
-const User = require('../models/User')
-const keyv = require('../services/keyv')
-
-const { USE_OTP, KEY_EXPIRY, SECRET_KEY, OTP_SECRET_KEY, GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET } = require('../config')
+const { KEY_EXPIRY, SECRET_KEY, GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET } = require('../config')
 
 authRoutes
 .post('/signup', async (req,res) => {
-  // const {email, password} = req.body
-  // password = bcrypt.hashSync(password, SALT_ROUNDS)
-  // const rv = await createUser(email, password)
-  res.status(201).end()
+  try {
+    await signupUser(req.body)
+    res.status(201).end()
+  } catch(e) {
+    // duplicate username, email?
+    res.status(500).end()
+  }
 })
 .post('/check-github', async (req,res) => {
   try {
@@ -41,8 +39,7 @@ authRoutes
       return res.status(401).json({ message })
     }
     const { id } = user
-    const token = createToken({ id }, USE_OTP ? OTP_SECRET_KEY : SECRET_KEY, {expiresIn: KEY_EXPIRY}) // 5 minute expire for login
-    await keyv.set(token, token)
+    const token = createToken({ id }, SECRET_KEY, {expiresIn: KEY_EXPIRY}) // 5 minute expire for login
     return res.status(200).json({ token })
   } catch (e) {
     console.log(e)
@@ -50,11 +47,8 @@ authRoutes
   return res.status(401).end()
 })
 .get('/logout', authUser, async (req,res) => {
-  // console.log('logging out')
+  // clear in frontend only
   try {
-    const incomingToken = req.headers.authorization.split(' ')[1]
-    await keyv.delete(incomingToken)
-    // clear the token
     return res.status(200).json({ message: 'Logged Out' })  
   } catch (e) { }
   return res.status(500).json()  
@@ -67,24 +61,14 @@ authRoutes
         const message = 'Incorrect email or password'
         return res.status(401).json({ message })
       }
-      const { id } = user
-      const token = createToken({ id }, SECRET_KEY,  {expiresIn: USE_OTP ? '5m' : KEY_EXPIRY}) // 5 minute expire for login
-      await keyv.set(token, token)
-      if (USE_OTP === 'SMS') {
-        // Generate PIN
-        const pin = (Math.floor(Math.random() * (999999 - 0 + 1)) + 0).toString().padStart(6, "0")
-        const ts = new Date() // utc?
-        // update pin where ts > ?
-        // set user SMS
-        if (NODE_ENV === 'development') {
-  
-        }
-        // TBD send SMS
-      }
+      const { role } = user
+      const token = createToken({ email, role }, SECRET_KEY, {expiresIn: KEY_EXPIRY}) // 5 minute expire for login
       return res.status(200).json({ token })  
-    } catch (e) { }
+    } catch (e) {
+      // console.log(e.toString())
+    }
     return res.status(500).json()  
-  })
+})
   .get('/me', authUser, async (req,res) => {
     try {
       const { id } = req.decoded
