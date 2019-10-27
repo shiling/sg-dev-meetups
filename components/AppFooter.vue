@@ -1,5 +1,5 @@
 <template>
-	<footer>
+	<footer class="app-footer">
 		<div>Made with 💜 in 🇸🇬. We are open-source! 👉<a href="#">Github</a></div>
 	</footer>
 </template>

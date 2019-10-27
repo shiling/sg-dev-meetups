@@ -15,12 +15,15 @@ html, body {
 	background-color: #fffdf6;	
 }
 
-// #app {
-// 	position: relative; /* so that footer is stuck to the bottom of the page */
-// }
-
+//------------------------------
+// Layout
+//------------------------------
 .app-page {
 	padding-top: 4rem; // space after header
+}
+
+.app-footer {
+	margin-top: 100px;
 }
 
 .container-center {
@@ -31,6 +34,14 @@ html, body {
   text-align: center;
 }
 
-footer{
-	margin-top: 100px;
+//------------------------------
+// Responsive
+//------------------------------
+
+@media (min-width: 1440px){
+	.container {
+		max-width: 1392px;
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
