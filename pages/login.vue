@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="app-page container">
     <div>
       
       <h1 class="mega text-left">
