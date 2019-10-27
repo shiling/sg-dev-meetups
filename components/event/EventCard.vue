@@ -9,11 +9,19 @@
 			</div>
 		</div>
 		<div class="mb-2">
-			<fa icon="map-marker-alt"/> Where: {{event.venue}}
+			<span><small><fa icon="map-marker-alt"/> Where: {{event.venue}}</small></span>
 		</div>
-		<p class="mb-0 text-muted">
+		<p>
 			{{event.description}}
 		</p>
+		<div class="event-card__footer">
+			<div class="text-muted">
+				100 attending
+			</div>
+			<div class="actions">
+				<b-button variant="primary" v-if="showRsvp">RSVP</b-button>
+			</div>
+		</div>
 	</router-link>
 </template>
 <script>
@@ -22,6 +30,10 @@ export default {
 		event: {
 			type: Object,
 			required: true
+		},
+		showRsvp: {
+			type: Boolean,
+			default: true
 		}
 	}
 }
@@ -52,6 +64,15 @@ export default {
 			font-weight: bold;	
 
 		}
+	}
+
+	.event-card__footer{
+
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+
 	}
 
 </style>
