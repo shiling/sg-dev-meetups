@@ -47,7 +47,9 @@
         </div>
       </div>
       <div class="col-md-6">
-        <a :href="'/group/'+ $route.params.id + '/join'" class='btn btn-primary' style='width:150px'> Join </a>
+        <router-link :to="'/group/'+ $route.params.id + '/join'" class='btn btn-outline-primary' style='width:150px'> 
+            <fa :icon="['fa','user-plus']"/> Join Group
+        </router-link>
         <button class="btn btn-secondary"> You are a member</button>
       </div>
     </div>
