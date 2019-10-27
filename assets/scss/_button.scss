@@ -5,4 +5,11 @@
 .btn-outline-primary {
 	border: 1px solid #f44336;
 	color: #f44336;
+	background-color:#fff;
+}
+
+.btn-outline-primary:hover {
+	background-color: #f44336;
+	color: white;
+	border: 1px solid #f44336;
 }

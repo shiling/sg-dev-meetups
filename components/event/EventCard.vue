@@ -16,7 +16,7 @@
 		</p>
 		<div class="event-card__footer">
 			<div class="text-muted">
-				100 attending
+				<fa :icon="['fa','users']" /> 100 attending
 			</div>
 			<div class="actions">
 				<b-button variant="primary" v-if="showRsvp">RSVP</b-button>

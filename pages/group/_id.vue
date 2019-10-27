@@ -2,7 +2,7 @@
   <div class="container mt-4">
     <div class="row" style='background-color: #fff'>
         
-      <div class="col-md-6" >
+      <div class="col-md-6 p-1"  >
           <img :src='group.mainImg' class='rounded img-fluid'
           style='width:100%;max-height:350px'> 
       </div>
