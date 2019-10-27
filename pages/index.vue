@@ -2,33 +2,26 @@
 	<div id="home-page" class="app-page container">
 		<div class="row">
 			<div class="col-3">
-				<!-- Visiting Singapore? -->
-				<div class="card mb-3">
-					<h5>
-						<b>Visiting Singapore?</b>
-					</h5>...
-				</div>
-
 				<!-- TOPICS-->
-				<div class="card mb-3">
-					<h5>
+				<section class="mb-5">
+					<h5 class="mb-3">
+						<fa icon="cube" />
 						<b>Topics</b>
-					</h5>...
-				</div>
+					</h5>
+					<tag-list :tags="topics" direction="vertical"></tag-list>
+				</section>
 
 				<!-- CPFs-->
-				<div class="card mb-3">
-					<h5>
-						<b>CPFs</b>
-					</h5>...
-				</div>
-
-				<!-- Code of conduct -->
-				<div class="card mb-3">
-					<h5>
-						<b>Code of conduct</b>
-					</h5>...
-				</div>
+				<section class="mb-5">
+					<h5 class="mb-3">
+            <fa icon="bullhorn" />
+						<b>Speaking Opportunities</b>
+					</h5>
+					<div>
+						<div class="card mb-3">...</div>
+						<div class="card mb-3">...</div>
+					</div>
+				</section>
 
 				<li>
 					<router-link :to="'/user'">User</router-link>
@@ -63,7 +56,9 @@
 						</section>
 					</div>
 					<div class="col-4">
-						<section id="my-events">
+
+						<!-- MY EVENTS -->
+						<section id="my-events" class="mb-5">
 							<h2 class="mega mb-3">Your events</h2>
 							<!-- Date range selection -->
 							<div class="mb-3">
@@ -72,6 +67,28 @@
 							</div>
 							<!---->
 							<event-list :events="rsvps" :condensed="true"></event-list>
+						</section>
+
+						<!-- VISITING SINGAPORE? -->
+						<section class="mb-5">
+							<h5 class="mb-3">
+								<b>🇸🇬 Visiting Singapore?</b>
+							</h5>
+							<p
+								class="text-muted"
+							>
+                First time visiting Singapore? Read the <a href="https://github.com/rubysg/singapore" target="_blank">handy guide</a> to visiting Singapore by friends from <fa :icon="['fab', 'github']"/> <a href="https://github.com/rubysg">@rubysg</a>.
+              </p>
+						</section>
+
+						<!-- CODE OF CONDUCT -->
+						<section id="code-of-conduct" class="mb-5">
+							<h5 class="mb-3">
+								<b>Code of conduct</b>
+							</h5>
+							<p
+								class="text-muted"
+							>Morbi at tortor at sem tempus faucibus. Donec sodales aliquam vulputate. Integer scelerisque mauris eu interdum gravida. Quisque hendrerit facilisis est vel egestas. Fusce malesuada, mauris vel pulvinar bibendum, leo ante consectetur risus, sit amet tincidunt lectus leo porttitor sapien. Nunc aliquet consectetur leo, sit amet elementum sapien venenatis ut. Phasellus in risus orci.</p>
 						</section>
 					</div>
 				</div>
@@ -82,10 +99,23 @@
 
 <script>
 import EventList from "~/components/event/EventList.vue";
+import TagList from "~/components/TagList.vue";
 
 export default {
+	components: {
+		EventList,
+		TagList
+	},
 	data: function() {
 		return {
+			topics: [
+				"#webdev",
+				"#javascript",
+				"#css",
+				"#ai",
+				"#machinelearning",
+				"#datascience"
+			],
 			events: [
 				{
 					id: "12345678",
@@ -113,9 +143,6 @@ export default {
 				}
 			]
 		};
-	},
-	components: {
-		EventList
 	}
 };
 </script>
