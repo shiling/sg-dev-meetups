@@ -47,6 +47,7 @@
 		},
 
 		components: {
+				GroupSummaryCard
 		}
 	}
 </script>
