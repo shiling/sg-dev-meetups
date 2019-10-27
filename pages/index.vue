@@ -1,45 +1,45 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        HOME PAGE
-      </h1>
-      <h2 class="subtitle">
-        Platform for SG software developers to meetup
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+  <div id="home-page" class="app-page container">
+    <div class="row">
+      <div class="col-2">
+        <h5><b>Topics</b></h5>
+        <div>...</div>
+        <h5><b>CFPs</b></h5>
+        <div>...</div>
+      </div>
+      <div class="col-6">
+        <!-- EVENT LISTING -->
+        <div class="event-listing">
 
-        Main Paths 
-        <div class="row text-left">
-          <ul class='path'>
-            <li><a href="/user">User</a></li>
-            <li><a href="/login">Login</a></li>
+          <h1 class="mega mb-3"><i class=""></i> Meetups <small>in Singapore</small></h1>
+          
+          <!-- Date range selection -->
+          <div class="mb-3">
+            <a href="#" class="event-date-range-selection active">Upcoming</a>
+            <a href="#" class="event-date-range-selection">This Week</a>
+          </div>
 
-            <li><a href="/group">Group</a></li>
-            <li><a href="/group/1">Group id</a></li>
+          <!---->
+          <div>
+            <div class="card">
+              ...
+            </div>
+          </div>
 
-            <li><a href="/event">Event</a></li>
-          </ul>
         </div>
-
-        
-
-
+      </div>
+      <div class="col-4">
+          <h2 class="mega mb-3">Your events</h2>
+          <!-- Date range selection -->
+          <div class="mb-3">
+            <a href="#" class="event-date-range-selection active">All</a>
+            <a href="#" class="event-date-range-selection">Today</a>
+          </div>
+          <div>
+            <div class="card">
+              ...
+            </div>
+          </div>
       </div>
     </div>
   </div>
@@ -55,6 +55,26 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+
+  a.event-date-range-selection {
+  
+    margin-right: 1rem;
+
+    font-size: 1.5rem;
+    
+    color: #424242;
+    &:hover{
+      color: #3d5afe;
+      text-decoration: none;
+    }
+
+    &.active {
+      color: #3d5afe;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+  }
 
 </style>
