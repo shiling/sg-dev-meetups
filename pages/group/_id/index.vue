@@ -70,7 +70,9 @@
           <div v-for='n in 2' class="card mb-4">
             <div class="card-body">
              <h6>12 Nov 19, 14:00</h6>
-             <h4>Vue.js Meeting</h4>
+             <router-link :to="'/event/'">
+                <h4>Vue.js Meeting</h4>
+             </router-link>
              <div class="text-muted">
               Lorem Ipsum 300 {{ n }}
             </div>
