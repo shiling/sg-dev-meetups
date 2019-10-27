@@ -7,7 +7,7 @@
           style='width:100%;max-height:350px'> 
       </div>
       <div class="col-md-6 px-4 py-2">
-         <h1>
+         <h1 class='mega'>
           GROUP "{{$route.params.id}}" PAGE
           </h1>
           <h6 class='mt-4 text-muted'>
@@ -37,19 +37,18 @@
              
       </div>
     
-    <hr class='my-4'>
+    
     
     </div>
 
-    
-    <div class="row my-2">
+    <div class="row my-2 buttonRow">
       <div class="col-md-6">
         <div class="list-group list-group-horizontal-md" id="myList" role="tablist">
           <a class="list-group-item" data-toggle="list" href="#home" role="tab">Events</a>
           <a class="list-group-item" data-toggle="list" href="#profile" role="tab">Chats</a>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 py-2">
         <router-link :to="'/group/'+ $route.params.id + '/join'" class='btn btn-outline-primary' style='width:150px'> 
             <fa :icon="['fa','user-plus']"/> Join Group
         </router-link>
@@ -60,8 +59,6 @@
           </button>
       </div>
     </div>
-
-    <hr class='my-4'>
     
     <div class="row mt-4">
       <div class="col-md-6">
@@ -78,7 +75,7 @@
             </div>
                 <div class="row">
                  <div class="col-md-6">
-                  <fa :icon="['fa','users']" /> 48 Attendees
+                  <fa :icon="['fa','users']" :style="iconStyle"/> 48 Attendees
                 </div>
                 <div class="col-md-6">
                   <fa :icon="['fa','map-marker-alt']" /> 99 HackerSpace, Lavender                        
@@ -86,8 +83,7 @@
               </div>
             </div>
           </div>
-
-  </div>
+        </div>
 
         <div class="col-md-6">
             
@@ -136,7 +132,8 @@ export default {
       group: {
         "mainImg" : "https://picsum.photos/400/300"
       },
-      showGroupDetail: true
+      showGroupDetail: true,
+      iconStyle: "width: 30px;display:inline-block;margin-right: 30px;"
     }
   },
 
@@ -148,7 +145,12 @@ export default {
 }
 </script>
 
-<style>
+<style scoped="">
+  .icon {
+    width: 30px;
+    display:inline-block;
+    margin-right: 25px;
+  }
   .profile {
     height: 50px;
   }
@@ -158,6 +160,12 @@ export default {
   .details svg {
     display:inline-block;
     width: 30px;
+  }
+
+  .buttonRow {
+    padding: 10px 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
   }
 
 </style>

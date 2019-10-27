@@ -3,7 +3,7 @@
 		
 		<div class="row">
 			<div class="col-md-8">
-				<h1>Popular in Singapore ({{groups.length}})</h1>
+				<h1 class='mega mb-4'>Popular in Singapore ({{groups.length}})</h1>
 				<ul class="list-group list-group-horizontal">
 					<li class="list-group-item">First item</li>
 					<li class="list-group-item">Second item</li>
