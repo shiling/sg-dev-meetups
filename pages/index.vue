@@ -129,7 +129,8 @@ export default {
 					name: "Talk.CSS #11",
 					description:
 						"Curabitur a sagittis augue, eget accumsan diam. Vestibulum porttitor luctus sapien, eu dignissim quam sodales at. Pellentesque lacinia nunc ut porttitor elementum.",
-					venue: "Hackerspace",
+          venue: "Hackerspace",
+          bannerImgUrl: "https://picsum.photos/400/200",
 					date: new Date().getTime() / 1000 // epoch seconds
 				},
 				{
@@ -137,7 +138,8 @@ export default {
 					name: "Vue.JS #11",
 					description:
 						"Nulla diam orci, interdum eget congue sed, lacinia quis lacus. Sed sagittis in arcu eget porta.",
-					venue: "Hackerspace",
+          venue: "Hackerspace",
+          bannerImgUrl: "https://picsum.photos/600/200",
 					date: new Date().getTime() / 1000 // epoch seconds
 				}
 			],
