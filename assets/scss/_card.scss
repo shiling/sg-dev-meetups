@@ -7,3 +7,19 @@
 	padding: 1rem;
 	
 }
+
+
+a.card {
+
+	// Reset link style if the card is a link
+	color: initial;
+	&, &:hover{
+		text-decoration: none;
+	}
+
+	// bigger and darker dropshadow
+	&:hover{
+		box-shadow: 4px 4px 0px 2px rgba(0,0,0,.25);
+	}
+
+}
