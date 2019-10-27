@@ -6,7 +6,6 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 const http = require('http')
 const https = require('https')
-
 const swaggerUi = require('swagger-ui-express')
 const swaggerJSDoc = require('swagger-jsdoc')
 
@@ -22,7 +21,7 @@ const apiRoutes = require('./routes/api')
 const authRoutes = require('./routes/auth')
 const userRoutes = require('./routes/user')
 // const meatRoutes = require('./routes/meta')
-// const groupRoutes = require('./routes/group')
+const groupRoutes = require('./routes/group')
 // const eventRoutes = require('./routes/event')
 
 const specs = swaggerJSDoc({
@@ -60,7 +59,7 @@ const specs = swaggerJSDoc({
 
 app.use(cors())
 app.use('/api/auth', authRoutes)
-app.use('/api', apiRoutes, userRoutes)
+app.use('/api', apiRoutes, userRoutes, groupRoutes)
 app.get("*", (req, res) => res.status(404).json({ data: 'Not Found...' }))
 
 let server

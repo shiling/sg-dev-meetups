@@ -1,7 +1,8 @@
 
 const express = require('express')
 const userRoutes = express.Router()
-
+const { body, sanitizeBody,checkSchema, check, validationResult } = require('express-validator');
+const schema = require('../schema/groups')
 // const { authUser, findUserByEmail } = require('../services')
 const mongo = require('../services/mongo')
 const ObjectID = require('mongodb').ObjectID
@@ -62,17 +63,39 @@ userRoutes
       res.status(500).json({ error: e.toString() })
     }
   })
+
+  
+
+
  
-  .post('/group', authUser, async (req, res) => {
+  .post('/group', checkSchema(schema), authUser, async (req, res) => {
     try {
-      if (req.decoded.role === 'admin') {
-        const data = req.body
-        await mongo.db.collection('group').insertOne(data)
+      const result = validationResult(req);
+      console.log(result)
+      if (!result.isEmpty()) {
+        res.status(422).json({ errors: result.array() });
       }
-      res.status(200).json()
+
+
+      var data = req.body;
+      data['hosts'] = req.username;
+      const groupid = await mongo.db.collection('group').insertOne(data)
+      data.id = data['_id']
+      delete data['_id']
+      res.status(200).json(data)
+      
     } catch (e) {
       res.status(500).json({ error: e.toString() })
     }
   })
+
+  function authUser(req,res,next){
+    req['decoded'] = {'role': 'admin'};
+    req.username = 'test';
+    next()
+  }
+
+    
+  
 
 module.exports = userRoutes
