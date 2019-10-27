@@ -26,18 +26,14 @@
         <section id="user-interests" class="mb-3">
           <h2>Interests</h2>
             <p>
-              <a href="#" v-for="interest in user.interests" :key="interest">
-                {{interest}}
-              </a>
+              <tag-list :tags="user.interests"></tag-list>
             </p>
         </section>
         <!---SPEAKING-->
         <section id="user-speaking-topics" class="mb-3">
           <h2>Open to speaking about</h2>
           <p>
-            <a href="#" v-for="topic in user.speaking" :key="topic">
-              {{topic}}
-            </a>
+            <tag-list :tags="user.speaking"></tag-list>
           </p>
         </section>
         <!---GROUPS-->
@@ -60,10 +56,12 @@
 
 <script>
 
-import GroupSummaryCard from "~/components/group/GroupSummaryCard.vue"
+import GroupSummaryCard from "~/components/group/GroupSummaryCard"
+import TagList from "~/components/TagList"
 
 export default {
   components: {
+    TagList,
     GroupSummaryCard
   },
   data: function(){
@@ -100,9 +98,6 @@ export default {
         }
       }
     }
-  },
-  components: {
-    GroupSummaryCard
   }
 }
 </script>

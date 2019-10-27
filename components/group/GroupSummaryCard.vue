@@ -3,12 +3,18 @@
 		<div class="meetup-group-summary-card__image" :style="style.groupImage"></div>
 		<div class="meetup-group-summary-card__description">
 			<div class="meetup-group-summary-card__name">{{group.name}}</div>
-			<div>{{group.tags}}</div>
+			<tag-list :tags="group.tags"></tag-list>
 		</div>
 	</router-link>
 </template>
 <script>
+
+import TagList from "~/components/TagList"
+
 export default {
+	components: {
+		TagList
+	},
 	props: {
 		group: {
 			type: Object,
