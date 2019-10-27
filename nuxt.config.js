@@ -12,7 +12,8 @@ module.exports = {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: "https://fonts.googleapis.com/css?family=Fira+Sans:400,400i,700|Open+Sans:400,400i,700&display=swap" }
     ]
   },
   /*
@@ -23,7 +24,6 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    "https://fonts.googleapis.com/css?family=Fira+Sans:400,400i,700|Open+Sans:400,400i,700&display=swap", // Google fonts
     "@/assets/scss/app.scss",
   ],
   /*

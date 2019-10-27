@@ -3,18 +3,17 @@
     <div class="row" style='background-color: #fff'>
         
       <div class="col-md-6" >
-          <img src='https://images.unsplash.com/photo-1469135762633-c299d101636a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=968&q=80' 
-          class='rounded img-fluid'
+          <img :src='group.mainImg' class='rounded img-fluid'
           style='width:100%;max-height:350px'> 
       </div>
       <div class="col-md-6">
          <h1>
           GROUP "{{$route.params.id}}" PAGE
           </h1>
-          <h5 class='mt-4'>
+          <h6 class='mt-4 text-muted'>
             Platform for SG software developers to meetup
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-          </h5>
+          </h6>
 
           <div class="details mt-4 ml-4">
             <div>
@@ -117,7 +116,9 @@ export default {
   },
   data() {
     return {
-      'img':'someimg'
+      group: {
+        "mainImg" : "https://picsum.photos/400/300"
+      }
     }
   },
 
