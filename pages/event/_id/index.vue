@@ -44,6 +44,9 @@
        <button class='btn btn-outline-primary'>
           <fa :icon="['far','thumbs-up']" />
        RSVP For This Event</button>
+
+       <button class='btn btn-secondary'> Already RSVP </button>
+
     </div>
   </div>
   <hr>
