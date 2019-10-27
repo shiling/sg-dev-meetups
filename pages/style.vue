@@ -1,8 +1,7 @@
 <template>
-  <div class="container text-center">
+  <div class="app-page container text-center">
 
-
-    <div id="typography" class="mb-3">
+    <div id="typography" class="card mb-3">
       <h1>Typography</h1>
       <hr>
       <div>
@@ -19,7 +18,7 @@
       </div>
     </div>
 
-    <div id="font-awesome" class="mb-3">
+    <div id="font-awesome" class="card mb-3">
       <h1>FontAwesome</h1>
       <hr>
       <div>
@@ -28,7 +27,7 @@
       </div>
     </div>
 
-    <div id="buttons">
+    <div id="buttons" class="card mb-3">
       <h1>Buttons</h1>
       <hr>
       <div class="mb-3">
@@ -44,7 +43,7 @@
       </div>
     </div>
 
-    <div id="user-avatar">
+    <div id="user-avatar" class="card mb-3">
       <h1>Avatar</h1>
       <hr>
       <div>
@@ -62,7 +61,7 @@
       </div>
     </div>
 
-    <div id="form">
+    <div id="form" class="card mb-3">
       <h1>Form</h1>
       <hr>
       
