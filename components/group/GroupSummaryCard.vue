@@ -3,6 +3,9 @@
 		<div class="meetup-group-summary-card__image cropped" :style="style.groupImage"></div>
 		<div class="meetup-group-summary-card__description">
 			<div class="meetup-group-summary-card__name">{{group.name}}</div>
+			<div class="">
+              <fa :icon="['fa','users']"/> 1000 members - Public Group 
+            </div>
 			<tag-list :tags="group.tags"></tag-list>
 		</div>
 	</router-link>
