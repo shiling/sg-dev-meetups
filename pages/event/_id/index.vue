@@ -38,8 +38,6 @@
           </div>
         </div>
       </div>
-
-
         
         <h6 class='mt-4 text-muted'>
           Platform for SG software developers to meetup
@@ -47,8 +45,6 @@
         </h6>
 
 
- 
-    
       <div class="mt-5" style='font-size:25px'>
                 Share: <fa :icon="['fab','facebook-square']" /> 
                         <fa :icon="['fab','twitter-square']" /> 
@@ -104,7 +100,6 @@
     </div>
     <div class="col-md-6">
         <h3> Posts (20)</h3>
-
         <div class="mt-4">
           <div class="card">
             <div class="card-body">
@@ -113,10 +108,7 @@
                <hr> 
             </div>
           </div>
-
         </div>
-
-
     </div>
   </div>
 

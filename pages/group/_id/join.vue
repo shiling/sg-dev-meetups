@@ -21,7 +21,7 @@
 
       	</div>
       	<div class="mt-2">&nbsp;</div>
-      	<a :href="'/group/' + $route.params.slug ">Take Me Back</a>
+      	<router-link :to="'/group/' + $route.params.id ">Take Me Back</router-link>
 
 
       </div>

@@ -93,21 +93,27 @@
             
             <div class="">
               <h3>Organizers (5)</h3>
-              <div class="mt-4">
-                <img src="https://image.flaticon.com/icons/svg/145/145842.svg" class='profile'>
-                <b>Aaron</b>
+              <div class="row mt-4">
+                <div v-for="n in 4" class="col-3 my-2 px-2 text-center">
+                  <img src="https://image.flaticon.com/icons/svg/145/145842.svg" class='profile mr-2'>
+                  <b>Aaron</b>  
+                </div>
+                
               </div>
             </div>
+
             <div class="mt-5">
               <h3><fa :icon="['fa','users']" /> Members (200)</h3>
               <br>
-              <div class="row mt-2 px-2">
-                <div v-for="n in 16" class="col-sm">
-                  <img src="https://image.flaticon.com/icons/svg/147/147144.svg" class='profile mb-4'>
-                  
-                </div>
-
+              
+              <div class="container-fluid">
+               <div class="row mt-2 px-2 justify-content-start">
+                  <div v-for="n in 16" class="col-2">
+                    <img src="https://image.flaticon.com/icons/svg/147/147144.svg" class='profile mb-4'>   
+                  </div>
+                </div>                
               </div>
+ 
               
             </div>
 
@@ -144,7 +150,7 @@ export default {
 
 <style>
   .profile {
-    height: 40px;
+    height: 50px;
   }
   .details div {
     margin-bottom: 5px
