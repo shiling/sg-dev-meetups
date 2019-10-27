@@ -6,3 +6,11 @@ html, body {
 .app-page {
 	padding-top: 100px;
 }
+
+.container-center {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
