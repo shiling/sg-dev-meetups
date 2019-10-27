@@ -16,7 +16,7 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
           </h5>
 
-          <div class="details mt-4 ml-2">
+          <div class="details mt-4 ml-4">
             <div>
               <fa :icon="['fas', 'map-marker-alt']"/> Singapore, Singapore
             </div>
@@ -29,6 +29,11 @@
 
           </div>
 
+          <div class="mt-5">
+                Shares: <fa :icon="['fab','facebook-square']" /> 
+                        <fa :icon="['fab','twitter-square']" /> 
+                        <fa :icon="['fab','linkedin']" /> 
+          </div>
           
              
       </div>
@@ -56,25 +61,24 @@
 
             <div class="card mt-2">
               <div class="card-body">
-                 <h6>12 Nov 19</h6>
+                 <h6>12 Nov 19, 14:00</h6>
                  <h4>Vue.js Meeting</h4>
                  <div class="text-muted">
                       Lorem Ipsum 300
                  </div>
                  <div class="row">
                      <div class="col-md-6">
-                      
                         <fa :icon="['fa','users']" /> 48 Attendees
                         
-
-                     </div>
+                      </div>
                      <div class="col-md-6">
-                        <fa :icon="['fa','map-marker-alt']" /> 99 HackerSpace, Lavender
-                                               
+                        <fa :icon="['fa','map-marker-alt']" /> 99 HackerSpace, Lavender                        
                      </div>
                  </div>
                  
               </div>
+
+              
             </div>
 
         </div>
