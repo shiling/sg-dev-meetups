@@ -2,6 +2,9 @@
 
 > Platform for SG software developers to meetup
 
+
+> Come join our [slack channel](https://launchpass.com/kopijs) #open-meetup
+
 ## Build Setup
 
 ``` bash
