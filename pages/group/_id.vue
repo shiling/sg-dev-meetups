@@ -29,8 +29,8 @@
 
           </div>
 
-          <div class="mt-5">
-                Shares: <fa :icon="['fab','facebook-square']" /> 
+          <div class="mt-5" style='font-size:25px'>
+                Share: <fa :icon="['fab','facebook-square']" /> 
                         <fa :icon="['fab','twitter-square']" /> 
                         <fa :icon="['fab','linkedin']" /> 
           </div>
