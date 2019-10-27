@@ -44,7 +44,7 @@
             <b-form-textarea name="" placeholder='Description'></b-form-textarea>
             </b-form-group>
 
-            <button class='btn btn-primary btn-lg'>
+            <button class='btn btn-outline-primary mt-4'>
               <fa :icon="['fa','users']"/>
             Create A New Group</button>
 
