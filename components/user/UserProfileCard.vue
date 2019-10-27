@@ -1,6 +1,9 @@
 <template>
 	<div class="card user-profile-card text-center">
-		<div class="user-profile-card__image cropped rounded-circle mx-auto mb-3" :style="style.profileImage"></div>
+		<user-avatar
+			class="mx-auto mb-3"
+			:profile-image="user.profileImgUrl"
+		></user-avatar>
 		<h1 class="user-profile-card__name">{{user.name}}</h1>
 		<div class="mb-3">
 			<fa icon="link"/> <a class="user-profile-card__website" :href="user.website">{{user.website}}</a>
@@ -16,7 +19,13 @@
 	
 </template>
 <script>
+
+import UserAvatar from "~/components/user/UserAvatar.vue"
+
 export default {
+	components: {
+		UserAvatar
+	},
 	props: {
 		user: {
 			type: Object,
@@ -28,13 +37,6 @@ export default {
 		}
 	},
 	computed: {
-		style(){
-			return {
-				profileImage: {
-					'background-image' : `url(${this.user.profileImgUrl})`
-				}
-			}
-		},
 		userProfileLink(){
 			return `/user/${this.user.id}/update`
 		}
@@ -47,11 +49,6 @@ export default {
 
 		display: flex;
 		flex-direction: column;
-
-		.user-profile-card__image {
-			height: 120px;
-			width: 120px;
-		}
 
 		.user-profile-card__name{
 			font-weight: bold;
