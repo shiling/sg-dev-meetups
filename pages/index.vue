@@ -6,6 +6,21 @@
         <div>...</div>
         <h5><b>CFPs</b></h5>
         <div>...</div>
+
+        <ul>
+
+          <li>
+              <router-link :to="'/user'">User</router-link>
+          </li>
+          <li>
+              <router-link :to="'/group'">Group Index</router-link>
+          </li>
+
+          <li>    
+              <router-link :to="'/event/1'">Event</router-link>
+           </li>
+        </ul>
+
       </div>
       <div class="col-6">
         <!-- EVENT LISTING -->
