@@ -1,5 +1,11 @@
 <template>
 	<div id="home-page" class="app-page container">
+
+    <!-- SEARCH BOX -->
+		<div class="mb-5">
+			<b-form-input id="search-box" v-model="search" placeholder="🔍 Search Meetups"></b-form-input>
+		</div>
+
 		<div class="row">
 			<div class="col-3">
 				<!-- TOPICS-->
@@ -14,7 +20,7 @@
 				<!-- CPFs-->
 				<section class="mb-5">
 					<h5 class="mb-3">
-            <fa icon="bullhorn" />
+						<fa icon="bullhorn" />
 						<b>Speaking Opportunities</b>
 					</h5>
 					<div>
@@ -56,7 +62,6 @@
 						</section>
 					</div>
 					<div class="col-4">
-
 						<!-- MY EVENTS -->
 						<section id="my-events" class="mb-5">
 							<h2 class="mega mb-3">Your events</h2>
@@ -74,11 +79,12 @@
 							<h5 class="mb-3">
 								<b>🇸🇬 Visiting Singapore?</b>
 							</h5>
-							<p
-								class="text-muted"
-							>
-                First time visiting Singapore? Read the <a href="https://github.com/rubysg/singapore" target="_blank">handy guide</a> to visiting Singapore by friends from <fa :icon="['fab', 'github']"/> <a href="https://github.com/rubysg">@rubysg</a>.
-              </p>
+							<p class="text-muted">
+								First time visiting Singapore? Read the
+								<a href="https://github.com/rubysg/singapore" target="_blank">handy guide</a> to visiting Singapore by friends from
+								<fa :icon="['fab', 'github']" />
+								<a href="https://github.com/rubysg">@rubysg</a>.
+							</p>
 						</section>
 
 						<!-- CODE OF CONDUCT -->
@@ -108,6 +114,7 @@ export default {
 	},
 	data: function() {
 		return {
+			search: "",
 			topics: [
 				"#webdev",
 				"#javascript",
@@ -169,5 +176,13 @@ export default {
 			font-weight: bold;
 			text-decoration: underline;
 		}
+	}
+
+	#search-box {
+		border-color: black;
+		border-width: 3px;
+		font-size: 1.5rem;
+		max-width: 500px;
+		margin: 0 auto;
 	}
 </style>
