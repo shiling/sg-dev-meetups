@@ -1,6 +1,6 @@
 <template>
 	<router-link :to="'/group/' + group.id" class="card meetup-group-summary-card" :aria-label="group.name">
-		<div class="meetup-group-summary-card__image" :style="style.groupImage"></div>
+		<div class="meetup-group-summary-card__image cropped" :style="style.groupImage"></div>
 		<div class="meetup-group-summary-card__description">
 			<div class="meetup-group-summary-card__name">{{group.name}}</div>
 			<tag-list :tags="group.tags"></tag-list>
@@ -42,11 +42,6 @@ export default {
 		}
 
 		.meetup-group-summary-card__image {
-			background-color: #e0e0e0;
-			/* background-image to be dynamically set by component */
-			background-position: center center;
-			background-size: auto;
-			background-repeat: no-repeat;
 			width: 250px;
 			height: 150px;
 			// crop excess
