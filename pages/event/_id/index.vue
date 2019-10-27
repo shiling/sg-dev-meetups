@@ -8,6 +8,8 @@
           style='width:100%;max-height:350px'> 
       </div>
      <div class="col-md-6">
+    
+     <h3> This is the Event Title {{$route.params.id}}</h3>
  
      <div class="card mb-4">
         <div class="card-body">
@@ -38,8 +40,7 @@
       </div>
 
 
-        <h3> This is the Event Title {{$route.params.id}}</h3>
-
+        
         <h6 class='mt-4 text-muted'>
           Platform for SG software developers to meetup
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
@@ -108,7 +109,7 @@
           <div class="card">
             <div class="card-body">
               <div class="">How about this as a post?</div>
-              <p class='small'>By Steven</p>
+              <p class='small'>14:23  23 Nov 2019 By Steven</p>
                <hr> 
             </div>
           </div>
