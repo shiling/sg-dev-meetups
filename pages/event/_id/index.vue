@@ -1,5 +1,6 @@
 <template>
   <div class="container mt-2">
+    <b-alert show variant='success' dismissible>Default Alert</b-alert>
      <div class="row" style='background-color: #fff'>
         
       <div class="col-md-6 p-1">
