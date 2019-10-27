@@ -1,11 +1,11 @@
 <template>
-	<router-link to="#" class="card event-card">
+	<router-link :to="eventDetailsLink" class="card event-card">
 		<div class="event-card__header mb-2">
 			<div class="event-card__name">
 				{{event.name}}
 			</div>
 			<div class="event-card__date">
-				3 Oct, 7PM
+				<fa :icon="['far', 'clock']"/> {{eventDateTimeFormatted}}
 			</div>
 		</div>
 		<div class="mb-2">
@@ -19,7 +19,7 @@
 				<fa :icon="['fa','users']" /> 100 attending
 			</div>
 			<div class="actions">
-				<b-button variant="primary" v-if="showRsvp">RSVP</b-button>
+				<b-button variant="primary" v-if="showRsvp"><fa :icon="['far','thumbs-up']"/> RSVP</b-button>
 			</div>
 		</div>
 	</router-link>
@@ -34,6 +34,22 @@ export default {
 		showRsvp: {
 			type: Boolean,
 			default: true
+		}
+	},
+	computed: {
+		eventDetailsLink(){
+			return `/event/${this.event.id}`
+		},
+		eventDateTimeFormatted(){
+			let date = new Date(this.event.date * 1000)
+			return date.toLocaleDateString(undefined, {
+				weekday: "short",
+				day: "2-digit",
+				month: "short",
+				hour12: true,
+				hour: "numeric",
+				minute: "2-digit"
+			})
 		}
 	}
 }
