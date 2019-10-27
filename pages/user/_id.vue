@@ -44,9 +44,12 @@
         <section id="user-groups" class="mb-3">
           <h2>Member of {{user.groups.length}} groups</h2>
           <div class="user-groups">
-            <div class="card">
-              TalkCSS
-            </div>
+            <group-summary-card
+              v-for="group in user.groups"
+              :key="group.id"
+              :group="group"
+              class="mr-3 mb-3"
+            ></group-summary-card>
           </div>
         </section>
       </section>
@@ -57,7 +60,12 @@
 
 <script>
 
+import GroupSummaryCard from "~/components/group/GroupSummaryCard.vue"
+
 export default {
+  components: {
+    GroupSummaryCard
+  },
   data: function(){
     return {
       user: {
@@ -75,7 +83,14 @@ export default {
           {
             id: "talk-css",
             name: "TalkCSS",
-            bannerImageUrl: ""
+            bannerImgUrl: "https://via.placeholder.com/600x400",
+            tags: ["#css", "#webdev"]
+          },
+          {
+            id: "js-conf-asia",
+            name: "JsConfAsia",
+            bannerImgUrl: "https://via.placeholder.com/600x400",
+            tags: ["#javascript"]
           }
         ],
         social: {
@@ -87,27 +102,44 @@ export default {
     }
   },
   components: {
+    GroupSummaryCard
   }
 }
 </script>
 
 <style lang="scss" scoped>
   .user-profile {
+
     display: flex;
     flex-direction: column;
+
+    .user-profile__name{
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    
+    .user-profile__social-link{
+      margin: 0 .5rem;
+      font-size: 1.5rem;
+      color: #424242;
+      &:hover {
+        color: black;
+      }
+    }
     
   }
-  .user-profile__name{
-    font-weight: bold;
-    font-size: 2rem;
-  }
-  
-  .user-profile__social-link{
-    margin: 0 .5rem;
-    font-size: 1.5rem;
-    color: #424242;
-    &:hover{
-      color: black;
+
+  section{
+    h2 {
+      margin-bottom: 1rem;
     }
   }
+
+  .user-groups {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  
 </style>

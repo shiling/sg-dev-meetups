@@ -8,8 +8,8 @@
 		text-align: center;
 		padding: 1rem;
 		font-size: .8rem;
-		position: fixed;
-		bottom: 0;
+		/* position: fixed;
+		bottom: 0; */
 		width: 100%;
 	}
 </style>
