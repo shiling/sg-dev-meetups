@@ -2,35 +2,44 @@
 	<div id="home-page" class="app-page container">
 		<div class="row">
 			<div class="col-3">
-
-        <!-- Visiting Singapore? -->
+				<!-- Visiting Singapore? -->
 				<div class="card mb-3">
 					<h5>
 						<b>Visiting Singapore?</b>
 					</h5>...
 				</div>
 
-        <!-- TOPICS-->
+				<!-- TOPICS-->
 				<div class="card mb-3">
 					<h5>
 						<b>Topics</b>
 					</h5>...
 				</div>
 
-        <!-- CPFs-->
+				<!-- CPFs-->
 				<div class="card mb-3">
 					<h5>
 						<b>CPFs</b>
 					</h5>...
 				</div>
 
-        <!-- Code of conduct -->
+				<!-- Code of conduct -->
 				<div class="card mb-3">
 					<h5>
 						<b>Code of conduct</b>
 					</h5>...
 				</div>
 
+				<li>
+					<router-link :to="'/user'">User</router-link>
+				</li>
+				<li>
+					<router-link :to="'/group'">Group Index</router-link>
+				</li>
+
+				<li>
+					<router-link :to="'/event/1'">Event</router-link>
+				</li>
 			</div>
 
 			<div class="col-9">
