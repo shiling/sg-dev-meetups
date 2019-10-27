@@ -1,6 +1,6 @@
 <template>
 	<div class="container mt-4">
-		<h1>Popular in Singapore</h1>
+		<h1>Popular in Singapore ({{groups.length}})</h1>
 		<ul class="list-group list-group-horizontal">
 			<li class="list-group-item">First item</li>
 			<li class="list-group-item">Second item</li>
@@ -9,23 +9,14 @@
 		</ul> 		
 	
 		<div class="row mt-4">
+		
+            <group-summary-card
+              v-for="group in groups"
+              :key="group.id"
+              :group="group"
+              class="mr-3 mb-3"
+            >{{group.bannerImgUrl}} </group-summary-card>
 			
-			<div v-for='n in 9' class="col-md-3 ">	
-
-			<div class="card-simple card">
-				<img class='card-img-top' src="https://images.unsplash.com/photo-1469135762633-c299d101636a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=968&q=80" style='max-height: 150px'/>
-				<div class="card-body">
-					<h5>Group Title {{ n }}</h5>
-					<p class='text-muted'>
-						<fa :icon="['fa','users']"/> 1000 Members</p>
-				</div>	
-			</div>
-
-			
-			</div>
-			
-
-
 		</div>
 
 	</div>
@@ -33,11 +24,29 @@
 </template>
 
 <script>
-	import Logo from '~/components/Logo.vue'
-
+	import GroupSummaryCard from "~/components/group/GroupSummaryCard"
 	export default {
+
+		data() {
+	        return {
+	        	groups: [
+		          {
+		            id: "talk-css",
+		            name: "TalkCSS",
+		            bannerImgUrl: "https://picsum.photos/400/200",
+		            tags: ["#css", "#webdev"]
+		          },
+		          {
+		            id: "js-conf-asia",
+		            name: "JsConfAsia",
+		            bannerImgUrl: "https://picsum.photos/600/400",
+		            tags: ["#javascript"]
+		          }
+    			]
+    		}
+		},
+
 		components: {
-			Logo
 		}
 	}
 </script>
