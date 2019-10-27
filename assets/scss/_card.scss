@@ -1,25 +1,44 @@
+//-------------------------------
+// Card (Default variant)
+// - pops out with bold shadows
+//-------------------------------
+
 .card {
-
-	background-color: #FFF;
-	border: 2px solid black;
-	border-radius: 0;
-	box-shadow: 4px 4px 0px 0px rgba(0,0,0,.15);
-	padding: 1rem;
-	
+  background-color: #fff;
+  border: 1px solid grey;
+  border-radius: 0;
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
 }
-
 
 a.card {
+  // Reset link style if the card is a link
+  color: initial;
+  &,
+  &:hover {
+    text-decoration: none;
+  }
 
-	// Reset link style if the card is a link
-	color: initial;
-	&, &:hover{
-		text-decoration: none;
-	}
-
-	// bigger and darker dropshadow
-	&:hover{
-		box-shadow: 4px 4px 0px 2px rgba(0,0,0,.25);
-	}
-
+  // bigger and darker dropshadow
+  &:hover {
+    box-shadow: 4px 4px 0px 2px rgba(0, 0, 0, 0.25);
+  }
 }
+
+//-------------------------------
+// Card (Simple variant)
+//-------------------------------
+
+.card-simple {
+	border: 0;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	padding: 0;
+	border: 1px solid #efefef;
+	margin-bottom: 10px;
+  
+	.card-body {
+	  padding: 20px 20px 10px;
+	}
+  }

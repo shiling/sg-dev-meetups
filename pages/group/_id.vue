@@ -1,9 +1,11 @@
 <template>
-  <div class="container">
-    <div class="row">
+  <div class="container mt-4">
+    <div class="row" style='background-color: #fff'>
         
-      <div class="col-md-6">
-          <img src='https://images.unsplash.com/photo-1469135762633-c299d101636a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=968&q=80' style='width:100%;max-height:350px'> 
+      <div class="col-md-6" >
+          <img src='https://images.unsplash.com/photo-1469135762633-c299d101636a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=968&q=80' 
+          class='rounded img-fluid'
+          style='width:100%;max-height:350px'> 
       </div>
       <div class="col-md-6">
          <h1>
@@ -12,36 +14,71 @@
           <h5 class='mt-4'>
             Platform for SG software developers to meetup
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-          </h5> 
-          <div class="">
-            <i class="fa fa-address-book" aria-hidden="true"></i>
-          </div>     
-          <div class="">
-            <i class="fa fa-address-book" aria-hidden="true"></i>
-          </div>     
-          <div class="">
-            <i class="fa fa-address-book" aria-hidden="true"></i>
-          </div>     
+          </h5>
+
+          <div class="details mt-4 ml-4">
+            <div>
+              <fa :icon="['fas', 'map-marker-alt']"/> Singapore, Singapore
+            </div>
+            <div class="">
+              <fa :icon="['fa','users']"/> 1000 members - Public Group 
+            </div>     
+            <div class="">
+              <fa :icon="['fa','user-cog']"/> Organizers Lionel chardy
+            </div>  
+
+          </div>
+
+          <div class="mt-5" style='font-size:25px'>
+                Share: <fa :icon="['fab','facebook-square']" /> 
+                        <fa :icon="['fab','twitter-square']" /> 
+                        <fa :icon="['fab','linkedin']" /> 
+          </div>
+          
+             
       </div>
     </div>
 
+    <hr class='my-4'>
+    <div class="row my-2">
+      <div class="col-md-6">
+        <div class="list-group list-group-horizontal" id="myList" role="tablist">
+          <a class="list-group-item list-group-item-action" data-toggle="list" href="#home" role="tab">Events</a>
+          <a class="list-group-item list-group-item-action" data-toggle="list" href="#profile" role="tab">Chats</a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <button class='btn btn-primary' style='width:150px'> Join </button>
+        <button class="btn btn-secondary"> You are a member</button>
+      </div>
+    </div>
+    
     <div class="row mt-4">
       
         <div class="col-md-6">
               
-            <h2>Events</h2>
+            <h3>Events (10)</h3>
 
-            <div class="card">
+            <div v-for='n in 2' class="card mb-4">
               <div class="card-body">
-                 <h6>12 Nov 19</h6>
+                 <h6>12 Nov 19, 14:00</h6>
                  <h4>Vue.js Meeting</h4>
-                 <div class="">
-                       <i class='fa'> HackerSpace</i>
-                 </div>
                  <div class="text-muted">
-                      Lorem Ipsum 300
+                      Lorem Ipsum 300 {{ n }}
                  </div>
+                 <div class="row">
+                     <div class="col-md-6">
+                        <fa :icon="['fa','users']" /> 48 Attendees
+                        
+                      </div>
+                     <div class="col-md-6">
+                        <fa :icon="['fa','map-marker-alt']" /> 99 HackerSpace, Lavender                        
+                     </div>
+                 </div>
+                 
               </div>
+
+              
             </div>
 
         </div>
@@ -49,18 +86,19 @@
         <div class="col-md-6">
             
             <div class="">
-              <h2>Organizers</h2>
+              <h3>Organizers (5)</h3>
               <div class="">
                 <img src="https://image.flaticon.com/icons/svg/145/145842.svg" class='profile'>
                 <b>Aaron</b>
               </div>
             </div>
             <div class="mt-5">
-              <h2>Members</h2>
-              <div class="row">
+              <h3><fa :icon="['fa','users']" /> Members (200)</h3>
+              <br>
+              <div class="row mt-2">
                 <div v-for="n in 16" class="col-sm">
-                  <img src="https://image.flaticon.com/icons/svg/147/147144.svg" class='profile'>
-                  {{ n }}
+                  <img src="https://image.flaticon.com/icons/svg/147/147144.svg" class='profile mb-4'>
+                  
                 </div>
 
               </div>
@@ -95,6 +133,14 @@ export default {
 
 <style>
   .profile {
-    height: 60px;
+    height: 50px;
   }
+  .details div {
+    margin-bottom: 5px
+  }
+  .details svg {
+    display:inline-block;
+    width: 30px;
+  }
+
 </style>
