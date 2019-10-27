@@ -11,7 +11,7 @@
 			<a href="#" class="user-profile-card__social-link"><fa :icon="['fab', 'twitter']"/></a>
 			<a href="#" class="user-profile-card__social-link"><fa :icon="['fab', 'linkedin']"/></a>
 		</div>
-		<b-button variant="outline-primary"><fa icon="pencil-alt"/> Edit profile</b-button>
+		<b-button variant="outline-primary" :to="userProfileLink"><fa icon="pencil-alt"/> Edit profile</b-button>
 	</div>
 	
 </template>
@@ -34,6 +34,9 @@ export default {
 					'background-image' : `url(${this.user.profileImgUrl})`
 				}
 			}
+		},
+		userProfileLink(){
+			return `/user/${this.user.id}/update`
 		}
 	}
 }

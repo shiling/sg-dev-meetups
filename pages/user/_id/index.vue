@@ -56,6 +56,7 @@ export default {
   data: function(){
     return {
       user: {
+        id: "chenhuijing",
         profileImgUrl: "https://picsum.photos/id/237/200/300",
         name: "Chen Hui Jing",
         website: "https://www.chenhuijing.com",
