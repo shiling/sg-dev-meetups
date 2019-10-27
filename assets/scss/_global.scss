@@ -23,6 +23,14 @@ html, body {
 	padding-top: 100px; // space after header
 }
 
+.container-center {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 footer{
 	margin-top: 100px;
 }

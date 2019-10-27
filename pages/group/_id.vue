@@ -48,40 +48,36 @@
         </div>
       </div>
       <div class="col-md-6">
-        <button class='btn btn-primary' style='width:150px'> Join </button>
+        <a :href="'/group/'+ $route.params.id + '/join'" class='btn btn-primary' style='width:150px'> Join </a>
         <button class="btn btn-secondary"> You are a member</button>
       </div>
     </div>
+
+    <hr class='my-4'>
     
     <div class="row mt-4">
-      
-        <div class="col-md-6">
-              
-            <h3>Events (10)</h3>
+      <div class="col-md-6">
+        <h3>Events (10)</h3>
 
-            <div v-for='n in 2' class="card mb-4">
-              <div class="card-body">
-                 <h6>12 Nov 19, 14:00</h6>
-                 <h4>Vue.js Meeting</h4>
-                 <div class="text-muted">
-                      Lorem Ipsum 300 {{ n }}
-                 </div>
-                 <div class="row">
-                     <div class="col-md-6">
-                        <fa :icon="['fa','users']" /> 48 Attendees
-                        
-                      </div>
-                     <div class="col-md-6">
-                        <fa :icon="['fa','map-marker-alt']" /> 99 HackerSpace, Lavender                        
-                     </div>
-                 </div>
-                 
-              </div>
-
-              
+          <div v-for='n in 2' class="card mb-4">
+            <div class="card-body">
+             <h6>12 Nov 19, 14:00</h6>
+             <h4>Vue.js Meeting</h4>
+             <div class="text-muted">
+              Lorem Ipsum 300 {{ n }}
             </div>
+                <div class="row">
+                 <div class="col-md-6">
+                  <fa :icon="['fa','users']" /> 48 Attendees
+                </div>
+                <div class="col-md-6">
+                  <fa :icon="['fa','map-marker-alt']" /> 99 HackerSpace, Lavender                        
+                </div>
+              </div>
+            </div>
+          </div>
 
-        </div>
+  </div>
 
         <div class="col-md-6">
             
