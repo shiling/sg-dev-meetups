@@ -7,7 +7,7 @@
       </h1>
 
       <div class="text-left">
-        <small>Not yet registered? <router-link :to="'/register'">Create an account</router-link></small>
+        Not yet registered? <router-link :to="'/register'">Create an account</router-link>
       </div>
 
       <div class="card text-left my-3">
