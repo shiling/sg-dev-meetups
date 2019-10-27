@@ -95,11 +95,12 @@
                   <b-input id="inline-form-input-username" placeholder=""></b-input>
                 </b-input-group>
               </b-form-group> 
-
-              <p class="text-muted">Recent Places</p>
-                <div style="padding-top:10px;padding-bottom:10px;">
+              
+              
+              <div v-if="typeof locations !== 'undefined'" style="padding-top:10px;padding-bottom:10px;">
+                <p class="text-muted">Recent Places</p>
                 <div class="row flex-nowrap" style="overflow-x:scroll;overflow-y:hidden">
-                  <b-col md="3" v-for="item in [{location: 'asd', address: '123'},{location: 'asd', address: '123'},{location: 'asd', address: '123'},{location: 'asd', address: '123'},{location: 'asd', address: '123'},{location: 'asd', address: '123'},{location: 'asd', address: '123'},{location: 'asd', address: '123'},{location: 'asd', address: '123'},{location: 'asd', address: '123'},{location: 'asd', address: '123'},{location: 'asd', address: '123'},{location: 'asd', address: '123'}]">
+                  <b-col md="3" v-for="item in locations">
                     <div class="card" style="margin-bottom: 10px">
                       <div>
                         <p>{{ item.location }}</p>
@@ -159,8 +160,6 @@
 
               </b-form-group>
 
-              
-    
               <b-button variant="primary">Submit</b-button>
             </b-form>
     
@@ -197,7 +196,7 @@ export default {
       {location: 'asd', address: '123'},
       {location: 'asd', address: '123'}
     ],
-    hosts: [
+    locations: [
       {location: 'asd', address: '123'},
       {location: 'asd', address: '123'},
       {location: 'asd', address: '123'},
@@ -208,45 +207,7 @@ export default {
       {location: 'asd', address: '123'},
       {location: 'asd', address: '123'},
       {location: 'asd', address: '123'}
-    ],
-    items: [
-      { title: 'Foo' },
-      { title: 'Bar' }
     ]
   }
 }
 </script>
-
-<!-- <style>
-    .container {
-      margin: 0 auto;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-    
-    .title {
-      font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-        'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-      display: block;
-      font-weight: 300;
-      font-size: 100px;
-      color: #35495e;
-      letter-spacing: 1px;
-    }
-    
-    .subtitle {
-      font-weight: 300;
-      font-size: 42px;
-      color: #526488;
-      word-spacing: 5px;
-      padding-bottom: 15px;
-    }
-    
-    .links {
-      padding-top: 15px;
-    }
-    </style>
-     -->
