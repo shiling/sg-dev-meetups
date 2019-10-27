@@ -20,6 +20,9 @@ html, body {
 // }
 
 .app-page {
-	padding-top: 100px;
-	// padding-bottom: 100px; // space for footer
+	padding-top: 100px; // space after header
+}
+
+footer{
+	margin-top: 100px;
 }
