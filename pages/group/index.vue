@@ -19,7 +19,6 @@
 					<p class='text-muted'>
 						<fa :icon="['fa','users']"/> 1000 Members</p>
 				</div>	
-
 			</div>
 
 			

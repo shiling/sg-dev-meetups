@@ -29,6 +29,7 @@
           <li><a href="/user">User</a></li>
 
           <li><a href="/group">Group</a></li>
+          <li><a href="/group/1">Group id</a></li>
 
           <li><a href="/event">Event</a></li>
         </ul>

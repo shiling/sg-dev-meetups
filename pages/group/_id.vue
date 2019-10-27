@@ -48,8 +48,8 @@
         </div>
       </div>
       <div class="col-md-6">
-        <button class='btn btn-primary'> Join </button>
-        
+        <button class='btn btn-primary' style='width:150px'> Join </button>
+        <button class="btn btn-secondary"> You are a member</button>
       </div>
     </div>
     
