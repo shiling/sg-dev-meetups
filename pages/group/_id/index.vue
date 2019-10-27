@@ -1,6 +1,6 @@
 <template>
   <div class="container mt-4">
-    <div class="row" style='background-color: #fff'>
+    <div v-show='showGroupDetail' class="row" style='background-color: #fff'>
         
       <div class="col-md-6 p-1"  >
           <img :src='group.mainImg' class='rounded img-fluid'
@@ -36,9 +36,12 @@
           
              
       </div>
+    
+    <hr class='my-4'>
+    
     </div>
 
-    <hr class='my-4'>
+    
     <div class="row my-2">
       <div class="col-md-6">
         <div class="list-group list-group-horizontal-md" id="myList" role="tablist">
@@ -51,6 +54,10 @@
             <fa :icon="['fa','user-plus']"/> Join Group
         </router-link>
         <button class="btn btn-secondary"> You are a member</button>
+
+         <button @click='toggleGroupDetail' class='btn btn-light'> 
+            Toggle Group Detail
+          </button>
       </div>
     </div>
 
@@ -84,7 +91,7 @@
             
             <div class="">
               <h3>Organizers (5)</h3>
-              <div class="">
+              <div class="mt-4">
                 <img src="https://image.flaticon.com/icons/svg/145/145842.svg" class='profile'>
                 <b>Aaron</b>
               </div>
@@ -92,7 +99,7 @@
             <div class="mt-5">
               <h3><fa :icon="['fa','users']" /> Members (200)</h3>
               <br>
-              <div class="row mt-2">
+              <div class="row mt-2 px-2">
                 <div v-for="n in 16" class="col-sm">
                   <img src="https://image.flaticon.com/icons/svg/147/147144.svg" class='profile mb-4'>
                   
@@ -120,12 +127,15 @@ export default {
     return {
       group: {
         "mainImg" : "https://picsum.photos/400/300"
-      }
+      },
+      showGroupDetail: true
     }
   },
 
   methods: {
-
+    toggleGroupDetail() {
+      this.showGroupDetail = !this.showGroupDetail;
+    }
   }
 }
 </script>
