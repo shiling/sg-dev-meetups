@@ -31,11 +31,8 @@
             <a href="#" class="event-date-range-selection active">All</a>
             <a href="#" class="event-date-range-selection">Today</a>
           </div>
-          <div>
-            <div class="card">
-              ...
-            </div>
-          </div>
+          <!---->
+          <event-list :events="rsvps" :condensed="true"></event-list>
       </div>
     </div>
   </div>
@@ -59,6 +56,14 @@ export default {
           id: "83929123",
           name: "Vue.JS #11",
           description: "Nulla diam orci, interdum eget congue sed, lacinia quis lacus. Sed sagittis in arcu eget porta.",
+          venue: "Hackerspace",
+          date: (new Date().getTime() / 1000) // epoch seconds
+        }
+      ],
+      rsvps: [
+        {
+          id: "12345678",
+          name: "SG Dev Meetup Hackathon",
           venue: "Hackerspace",
           date: (new Date().getTime() / 1000) // epoch seconds
         }
