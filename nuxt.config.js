@@ -23,7 +23,8 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    "@/assets/scss/app.scss"
+    "https://fonts.googleapis.com/css?family=Fira+Sans:400,400i,700|Open+Sans:400,400i,700&display=swap", // Google fonts
+    "@/assets/scss/app.scss",
   ],
   /*
   ** Plugins to load before mounting the App

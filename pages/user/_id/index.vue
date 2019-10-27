@@ -2,23 +2,10 @@
   <div class="app-page container">
     
     <div class="row">
+
       <div class="col-4">
         <!---USER CARD-->
-        <div class="card user-profile text-center">
-          <div>
-            <img :src="user.profileImgUrl" alt="Profile image" class="user-profile__image rounded-circle mb-3">
-          </div>
-          <h1 class="user-profile__name">{{user.name}}</h1>
-          <div class="mb-3">
-            <fa icon="link"/> <a class="user-profile__website" :href="user.website">{{user.website}}</a>
-          </div>
-          <p>{{user.bio}}</p>
-          <div class="user-profile__social-list">
-            <a href="#" class="user-profile__social-link"><fa :icon="['fab', 'github']"/></a>
-            <a href="#" class="user-profile__social-link"><fa :icon="['fab', 'twitter']"/></a>
-            <a href="#" class="user-profile__social-link"><fa :icon="['fab', 'linkedin']"/></a>
-          </div>
-        </div>
+        <user-profile-card :user="user" :allow-edit="true"></user-profile-card>
       </div>
       
       <section class="col-8">
@@ -26,27 +13,26 @@
         <section id="user-interests" class="mb-3">
           <h2>Interests</h2>
             <p>
-              <a href="#" v-for="interest in user.interests" :key="interest">
-                {{interest}}
-              </a>
+              <tag-list :tags="user.interests"></tag-list>
             </p>
         </section>
         <!---SPEAKING-->
         <section id="user-speaking-topics" class="mb-3">
           <h2>Open to speaking about</h2>
           <p>
-            <a href="#" v-for="topic in user.speaking" :key="topic">
-              {{topic}}
-            </a>
+            <tag-list :tags="user.speaking"></tag-list>
           </p>
         </section>
         <!---GROUPS-->
         <section id="user-groups" class="mb-3">
           <h2>Member of {{user.groups.length}} groups</h2>
           <div class="user-groups">
-            <div class="card">
-              TalkCSS
-            </div>
+            <group-summary-card
+              v-for="group in user.groups"
+              :key="group.id"
+              :group="group"
+              class="mr-3 mb-3"
+            ></group-summary-card>
           </div>
         </section>
       </section>
@@ -57,11 +43,21 @@
 
 <script>
 
+import GroupSummaryCard from "~/components/group/GroupSummaryCard"
+import UserProfileCard from "~/components/user/UserProfileCard"
+import TagList from "~/components/TagList"
+
 export default {
+  components: {
+    GroupSummaryCard,
+    UserProfileCard,
+    TagList,
+  },
   data: function(){
     return {
       user: {
-        profileImgUrl: "https://via.placeholder.com/150",
+        id: "chenhuijing",
+        profileImgUrl: "https://picsum.photos/id/237/200/300",
         name: "Chen Hui Jing",
         website: "https://www.chenhuijing.com",
         bio: "Vivamus rutrum blandit quam, vel pellentesque felis porttitor a. Vivamus fermentum placerat risus ac volutpat. Sed eu porttitor augue, a accumsan eros.",
@@ -75,7 +71,14 @@ export default {
           {
             id: "talk-css",
             name: "TalkCSS",
-            bannerImageUrl: ""
+            bannerImgUrl: "https://picsum.photos/400/200",
+            tags: ["#css", "#webdev"]
+          },
+          {
+            id: "js-conf-asia",
+            name: "JsConfAsia",
+            bannerImgUrl: "https://picsum.photos/600/400",
+            tags: ["#javascript"]
           }
         ],
         social: {
@@ -85,29 +88,24 @@ export default {
         }
       }
     }
-  },
-  components: {
   }
 }
 </script>
 
 <style lang="scss" scoped>
-  .user-profile {
-    display: flex;
-    flex-direction: column;
-    
-  }
-  .user-profile__name{
-    font-weight: bold;
-    font-size: 2rem;
-  }
   
-  .user-profile__social-link{
-    margin: 0 .5rem;
-    font-size: 1.5rem;
-    color: #424242;
-    &:hover{
-      color: black;
+
+  section{
+    h2 {
+      margin-bottom: 1rem;
     }
   }
+
+  .user-groups {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  
 </style>

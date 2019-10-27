@@ -6,6 +6,10 @@
         Create an account
       </h1>
 
+      <div class="text-left">
+        Already registered? <router-link :to="'/login'">Login</router-link>
+      </div>
+
       <div class="card text-left my-3">
         <b-form id="registration-form" @submit="onSubmit" @reset="onReset">
 
@@ -25,7 +29,7 @@
               </b-form-group>
             </div>
             <div class="col-6">
-<b-form-group
+            <b-form-group
                 id="registration-form__lastname-group"
                 label="Last name"
                 label-for="registration-form__lastname-input"
@@ -73,9 +77,7 @@
 
       </div>
 
-      <div class="text-left">
-        <small>Already registered? <router-link :to="'/login'">Login</router-link></small>
-      </div>
+      
     </div>
   </div>
 </template>

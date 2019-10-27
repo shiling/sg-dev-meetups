@@ -13,7 +13,12 @@
 
 			<!-- Right aligned nav items -->
 			<b-navbar-nav class="ml-auto">
-		
+				
+      			<b-navbar-nav>
+					<b-button class="mr-2" variant="outline-light" :to="'/event/create'"><fa icon="scroll"/> Create an event</b-button>
+					<!-- <b-button class="mr-2" variant="link" :to="'/login'">Login</b-button> -->
+					<b-nav-item :to="'/login'" class="mr-2">Login</b-nav-item>
+				</b-navbar-nav>
 				<b-nav-item-dropdown id="account-menu" right>
 					<!-- Using 'button-content' slot -->
 					<template v-slot:button-content>
@@ -31,9 +36,34 @@
 <style lang="scss">
 	
 	#app-nav {
-		nav.navbar {
+
+		// BG color
+		.navbar {
 			background-color: #f44336;
-		}		
+		}	
+
+		// Layout
+		.navbar {
+			.navbar-nav {
+				align-items: center; /* override bootstrap */
+			}
+		}
+
+		// Links
+		.navbar-dark .navbar-nav .nav-link {
+			
+			font-weight: bold;
+		
+			transition: all .3s ease;
+
+			&:not(.disabled){
+				color: rgba(white, .8);
+				&:hover {
+					color: rgba(white, 1);
+				}
+			}
+			
+		}
 	}
 
 	#account-menu {
