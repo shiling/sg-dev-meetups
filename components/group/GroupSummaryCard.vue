@@ -4,7 +4,7 @@
 		<div class="meetup-group-summary-card__description">
 			<div class="meetup-group-summary-card__name">{{group.name}}</div>
 			<div class="">
-              <fa :icon="['fa','users']"/> 1000 members - Public Group 
+              <fa :icon="['fa','users']"/> 1000 members
             </div>
 			<tag-list :tags="group.tags"></tag-list>
 		</div>
