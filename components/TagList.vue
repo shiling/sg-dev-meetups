@@ -50,8 +50,13 @@ export default {
 			display: block;
 		}
 
+		font-size: 1rem;
+		&.small {
+			font-size: .9rem;
+		}
 		&.large {
 			font-size: 1.25rem;
 		}
+
 	}
 </style>
