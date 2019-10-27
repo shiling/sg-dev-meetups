@@ -6,7 +6,7 @@
           <img :src='group.mainImg' class='rounded img-fluid'
           style='width:100%;max-height:350px'> 
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 px-4 py-2">
          <h1>
           GROUP "{{$route.params.id}}" PAGE
           </h1>
@@ -41,9 +41,9 @@
     <hr class='my-4'>
     <div class="row my-2">
       <div class="col-md-6">
-        <div class="list-group list-group-horizontal" id="myList" role="tablist">
-          <a class="list-group-item list-group-item-action" data-toggle="list" href="#home" role="tab">Events</a>
-          <a class="list-group-item list-group-item-action" data-toggle="list" href="#profile" role="tab">Chats</a>
+        <div class="list-group list-group-horizontal-md" id="myList" role="tablist">
+          <a class="list-group-item" data-toggle="list" href="#home" role="tab">Events</a>
+          <a class="list-group-item" data-toggle="list" href="#profile" role="tab">Chats</a>
         </div>
       </div>
       <div class="col-md-6">
@@ -132,7 +132,7 @@ export default {
 
 <style>
   .profile {
-    height: 50px;
+    height: 40px;
   }
   .details div {
     margin-bottom: 5px
