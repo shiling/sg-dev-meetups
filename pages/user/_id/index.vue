@@ -13,14 +13,14 @@
         <section id="user-interests" class="mb-3">
           <h2>Interests</h2>
             <p>
-              <tag-list :tags="user.interests"></tag-list>
+              <tag-list :tags="user.interests" size="large"></tag-list>
             </p>
         </section>
         <!---SPEAKING-->
         <section id="user-speaking-topics" class="mb-3">
           <h2>Open to speaking about</h2>
           <p>
-            <tag-list :tags="user.speaking"></tag-list>
+            <tag-list :tags="user.speaking" size="large"></tag-list>
           </p>
         </section>
         <!---GROUPS-->
