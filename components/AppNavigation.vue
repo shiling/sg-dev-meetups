@@ -36,9 +36,34 @@
 <style lang="scss">
 	
 	#app-nav {
-		nav.navbar {
+
+		// BG color
+		.navbar {
 			background-color: #f44336;
-		}		
+		}	
+
+		// Layout
+		.navbar {
+			.navbar-nav {
+				align-items: center; /* override bootstrap */
+			}
+		}
+
+		// Links
+		.navbar-dark .navbar-nav .nav-link {
+			
+			font-weight: bold;
+		
+			transition: all .3s ease;
+
+			&:not(.disabled){
+				color: rgba(white, .8);
+				&:hover {
+					color: rgba(white, 1);
+				}
+			}
+			
+		}
 	}
 
 	#account-menu {
