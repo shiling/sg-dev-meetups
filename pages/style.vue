@@ -44,6 +44,24 @@
       </div>
     </div>
 
+    <div id="user-avatar">
+      <h1>Avatar</h1>
+      <hr>
+      <div>
+        <user-avatar
+          :profile-image="'https://picsum.photos/id/237/200'"
+        ></user-avatar>
+        <user-avatar
+          :profile-image="'https://picsum.photos/id/237/200'"
+          size="small"
+        ></user-avatar>
+        <user-avatar
+          :profile-image="'https://picsum.photos/id/237/200'"
+          size="mini"
+        ></user-avatar>
+      </div>
+    </div>
+
     <div id="form">
       <h1>Form</h1>
       <hr>
@@ -84,7 +102,6 @@
 
       </div>
 
-
     </div>
 
   </div>
@@ -92,10 +109,12 @@
 
 <script>
 import Logo from '~/components/Logo.vue'
+import UserAvatar from "~/components/user/UserAvatar.vue"
 
 export default {
   components: {
-    Logo
+    Logo,
+    UserAvatar
   }
 }
 </script>
