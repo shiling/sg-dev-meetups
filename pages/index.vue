@@ -20,11 +20,7 @@
           </div>
 
           <!---->
-          <div>
-            <div class="card">
-              ...
-            </div>
-          </div>
+          <event-list :events="events"></event-list>
 
         </div>
       </div>
@@ -46,11 +42,31 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import EventList from "~/components/event/EventList.vue"
 
 export default {
+  data: function(){
+    return {
+      events: [
+        {
+          id: "12345678",
+          name: "Talk.CSS #11",
+          description: "Curabitur a sagittis augue, eget accumsan diam. Vestibulum porttitor luctus sapien, eu dignissim quam sodales at. Pellentesque lacinia nunc ut porttitor elementum.",
+          venue: "Hackerspace",
+          date: (new Date().getTime() / 1000) // epoch seconds
+        },
+        {
+          id: "83929123",
+          name: "Vue.JS #11",
+          description: "Nulla diam orci, interdum eget congue sed, lacinia quis lacus. Sed sagittis in arcu eget porta.",
+          venue: "Hackerspace",
+          date: (new Date().getTime() / 1000) // epoch seconds
+        }
+      ]
+    }
+  },
   components: {
-    Logo
+    EventList
   }
 }
 </script>
