@@ -13,7 +13,12 @@
 
 			<!-- Right aligned nav items -->
 			<b-navbar-nav class="ml-auto">
-		
+				
+      			<b-navbar-nav>
+					<b-button class="mr-2" variant="outline-light" :to="'/event/create'"><fa icon="scroll"/> Create an event</b-button>
+					<!-- <b-button class="mr-2" variant="link" :to="'/login'">Login</b-button> -->
+					<b-nav-item :to="'/login'" class="mr-2">Login</b-nav-item>
+				</b-navbar-nav>
 				<b-nav-item-dropdown id="account-menu" right>
 					<!-- Using 'button-content' slot -->
 					<template v-slot:button-content>
