@@ -74,6 +74,8 @@
 							<event-list :events="rsvps" :condensed="true"></event-list>
 						</section>
 
+            <hr class="mb-5">
+
 						<!-- VISITING SINGAPORE? -->
 						<section class="mb-5">
 							<h5 class="mb-3">
