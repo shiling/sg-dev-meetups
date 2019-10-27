@@ -141,6 +141,33 @@ export default {
           venue: "Hackerspace",
           bannerImgUrl: "https://picsum.photos/600/200",
 					date: new Date().getTime() / 1000 // epoch seconds
+				},
+				{
+					id: "83929123",
+					name: "☕ Kopijs Aug 2019",
+					description:
+						"Nulla diam orci, interdum eget congue sed, lacinia quis lacus. Sed sagittis in arcu eget porta.",
+          venue: "Hackerspace",
+          bannerImgUrl: "https://picsum.photos/500/200",
+					date: new Date().getTime() / 1000 // epoch seconds
+				},
+				{
+					id: "83929123",
+					name: "ReactJS #20",
+					description:
+						"Nulla diam orci, interdum eget congue sed, lacinia quis lacus. Sed sagittis in arcu eget porta.",
+          venue: "Hackerspace",
+          bannerImgUrl: "https://picsum.photos/450/200",
+					date: new Date().getTime() / 1000 // epoch seconds
+				},
+				{
+					id: "83929123",
+					name: "Taqelah #17",
+					description:
+						"Nulla diam orci, interdum eget congue sed, lacinia quis lacus. Sed sagittis in arcu eget porta.",
+          venue: "Hackerspace",
+          bannerImgUrl: "https://picsum.photos/550/200",
+					date: new Date().getTime() / 1000 // epoch seconds
 				}
 			],
 			rsvps: [
